@@ -3,7 +3,7 @@ import {
   Check, Phone, ChevronRight, Star,
   Shield, FileText, BadgeCheck, Calendar, Tag, Clock, MapPin, Mail,
   Flame, Snowflake, AppWindow, WashingMachine, Sofa, Layers,
-  Home, Building2, Key, RefreshCw, Sparkles,
+  Building2, Key, RefreshCw, Sparkles,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { EstimateWidget } from '@/components/sections/EstimateWidget'
@@ -70,22 +70,23 @@ function SparkleIllustration() {
 
 function TestimonialCard({ testimonial }: { testimonial: typeof TESTIMONIALS[0] }) {
   return (
-    <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-card flex flex-col">
-      <div className="flex gap-0.5 mb-4">
-        {Array.from({ length: testimonial.rating }).map((_, i) => (
-          <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
-        ))}
-      </div>
-      <p className="text-gray-700 text-sm leading-relaxed mb-5 italic flex-1">
-        &ldquo;{testimonial.quote}&rdquo;
+    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 flex flex-col hover:bg-white/15 transition-all">
+      <div className="text-brand-300 font-display text-5xl leading-none mb-3 select-none">&ldquo;</div>
+      <p className="text-white/90 text-sm leading-relaxed mb-5 flex-1">
+        {testimonial.quote}
       </p>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 pt-4 border-t border-white/10">
         <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
           {testimonial.initials}
         </div>
         <div>
-          <p className="text-sm font-semibold text-gray-900">{testimonial.name}</p>
-          <p className="text-xs text-gray-400">{testimonial.location}</p>
+          <p className="text-sm font-semibold text-white">{testimonial.name}</p>
+          <p className="text-xs text-white/50">{testimonial.location}</p>
+        </div>
+        <div className="ml-auto flex gap-0.5">
+          {Array.from({ length: testimonial.rating }).map((_, i) => (
+            <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
+          ))}
         </div>
       </div>
     </div>
@@ -195,38 +196,38 @@ export default function HomePage() {
 
             {/* Right — stacked cards */}
             <div className="flex flex-col gap-5">
-              <div className="bg-gray-50 rounded-3xl p-6 flex items-center justify-between min-h-[140px] hover:bg-brand-50 transition-colors group">
+              <div className="bg-brand-800 rounded-3xl p-6 flex items-center justify-between min-h-[140px] group">
                 <div>
-                  <h3 className="font-display font-bold text-xl text-gray-900 mb-1.5 group-hover:text-brand-600 transition-colors">Commercial Cleaning</h3>
-                  <p className="text-gray-500 text-sm mb-3">Offices, retail, healthcare, schools, and managed properties.</p>
-                  <Link href="/services" className="inline-flex items-center gap-1.5 text-brand-500 font-semibold text-sm hover:gap-3 transition-all">
+                  <h3 className="font-display font-bold text-xl text-white mb-1.5">Commercial Cleaning</h3>
+                  <p className="text-brand-200/70 text-sm mb-3">Offices, retail, healthcare, schools, and managed properties.</p>
+                  <Link href="/services" className="inline-flex items-center gap-1.5 text-brand-300 font-semibold text-sm hover:text-white hover:gap-3 transition-all">
                     Learn More <ChevronRight size={14} />
                   </Link>
                 </div>
-                <div className="w-16 h-16 rounded-2xl bg-brand-50 group-hover:bg-white flex items-center justify-center ml-4 flex-shrink-0 transition-colors">
-                  <Building2 size={32} className="text-brand-500" />
+                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center ml-4 flex-shrink-0">
+                  <Building2 size={32} className="text-white" />
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-5">
-                {[
-                  { id: 'eot',       title: 'End of Tenancy', Icon: Key,       desc: 'Deposit-back guarantee' },
-                  { id: 'recurring', title: 'Recurring Cleans', Icon: RefreshCw, desc: 'Weekly or fortnightly' },
-                ].map(({ id, title, Icon, desc }) => (
-                  <Link
-                    key={id}
-                    href="/services"
-                    className="bg-gray-50 rounded-3xl p-5 flex flex-col justify-between min-h-[140px] hover:bg-brand-50 transition-colors group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-white group-hover:bg-brand-500 flex items-center justify-center transition-colors">
-                      <Icon size={22} className="text-brand-500 group-hover:text-white transition-colors" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-base text-gray-900 mb-0.5 group-hover:text-brand-600 transition-colors">{title}</h3>
-                      <p className="text-xs text-gray-400">{desc}</p>
-                    </div>
-                  </Link>
-                ))}
+                <Link href="/services" className="bg-amber-50 rounded-3xl p-5 flex flex-col justify-between min-h-[140px] hover:bg-amber-100 transition-colors group">
+                  <div className="w-12 h-12 rounded-xl bg-amber-100 group-hover:bg-amber-500 flex items-center justify-center transition-colors">
+                    <Key size={22} className="text-amber-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-base text-gray-900 mb-0.5 group-hover:text-amber-700 transition-colors">End of Tenancy</h3>
+                    <p className="text-xs text-gray-400">Deposit-back guarantee</p>
+                  </div>
+                </Link>
+                <Link href="/services" className="bg-sky-50 rounded-3xl p-5 flex flex-col justify-between min-h-[140px] hover:bg-sky-100 transition-colors group">
+                  <div className="w-12 h-12 rounded-xl bg-sky-100 group-hover:bg-sky-500 flex items-center justify-center transition-colors">
+                    <RefreshCw size={22} className="text-sky-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-base text-gray-900 mb-0.5 group-hover:text-sky-700 transition-colors">Recurring Cleans</h3>
+                    <p className="text-xs text-gray-400">Weekly or fortnightly</p>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -262,10 +263,32 @@ export default function HomePage() {
       </section>
 
       {/* ── TESTIMONIALS ──────────────────────────────────────── */}
-      <section className="py-12 md:py-20">
-        <div className="container-wide">
-          <span className="section-tag">Testimonials</span>
-          <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-12">What Our Clients Think</h2>
+      <section
+        className="py-12 md:py-20 bg-brand-900 relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+      >
+        <div className="container-wide relative z-10">
+          <span className="text-xs font-bold tracking-[0.15em] uppercase text-brand-300 mb-3 block">Testimonials</span>
+          <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
+            <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold text-white">What Our Clients Think</h2>
+            <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 border border-white/20">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <span className="font-bold text-white text-sm">4.9</span>
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {TESTIMONIALS.slice(0, 3).map((t) => (
               <TestimonialCard key={t.id} testimonial={t} />
@@ -327,22 +350,25 @@ export default function HomePage() {
       </section>
 
       {/* ── DISCOUNT STRIP ────────────────────────────────────── */}
-      <div className="bg-gray-900 py-8">
-        <div className="container-wide flex flex-wrap justify-center gap-12">
-          {[
-            ['20%', 'Off Weekly Visits',       '*Recurring clients'],
-            ['15%', 'Off Fortnightly Visits',  '*Recurring clients'],
-            ['10%', 'Off Monthly Visits',      '*Recurring clients'],
-            ['85%', 'Clients Rebook Monthly',  ''],
-          ].map(([pct, label, note]) => (
-            <div key={label} className="text-center">
-              <div className="font-display text-4xl font-extrabold text-brand-400">{pct}</div>
-              <div className="text-sm text-white/80 mt-1">{label}</div>
-              {note && <div className="text-xs text-white/40 mt-0.5">{note}</div>}
-            </div>
-          ))}
+      <section className="py-10 md:py-14">
+        <div className="container-wide">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { pct: '20%', label: 'Off Weekly Visits',       note: '*Recurring clients', cls: 'bg-brand-500' },
+              { pct: '15%', label: 'Off Fortnightly Visits',  note: '*Recurring clients', cls: 'bg-brand-900' },
+              { pct: '10%', label: 'Off Monthly Visits',      note: '*Recurring clients', cls: 'bg-amber-500' },
+              { pct: '85%', label: 'Clients Rebook Monthly',  note: '',                   cls: 'bg-gray-900' },
+            ].map(({ pct, label, note, cls }) => (
+              <div key={label} className={`${cls} text-white rounded-3xl p-7 relative overflow-hidden`}>
+                <div className="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-white/8" aria-hidden="true" />
+                <div className="font-display text-5xl font-extrabold mb-2 relative z-10">{pct}</div>
+                <div className="text-sm font-semibold opacity-90 relative z-10">{label}</div>
+                {note && <div className="text-xs opacity-50 mt-1 relative z-10">{note}</div>}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── PRICING PREVIEW ───────────────────────────────────── */}
       <section className="py-12 md:py-20">
@@ -390,16 +416,16 @@ export default function HomePage() {
           <span className="section-tag">Book in 60 Seconds</span>
           <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-12">Quick &amp; Easy Booking Process</h2>
           <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto relative">
-            {/* Connecting line */}
-            <div className="hidden sm:block absolute top-7 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-px bg-brand-200" aria-hidden="true" />
-            {[
-              ['1', 'Tell Us About Your Space',  'Select your service type, property size, and preferred date. Takes under 60 seconds.'],
-              ['2', 'Get Your Estimate',          'We provide an instant price estimate. If it doesn\'t feel right, negotiate directly with us.'],
-              ['3', 'We Clean, You Relax',        'Our vetted FAM team arrives on time with everything needed and leaves your space spotless.'],
-            ].map(([num, title, desc]) => (
-              <div key={num} className="flex flex-col items-center relative z-10">
-                <div className="w-14 h-14 rounded-full bg-brand-500 text-white font-display font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
-                  {num}
+            {/* Connecting line — adjusted for w-20 circles */}
+            <div className="hidden sm:block absolute top-10 left-[calc(16.67%+40px)] right-[calc(16.67%+40px)] h-px bg-brand-200" aria-hidden="true" />
+            {([
+              { Icon: Calendar,   title: 'Tell Us About Your Space',  desc: 'Select your service type, property size, and preferred date. Takes under 60 seconds.' },
+              { Icon: BadgeCheck, title: 'Get Your Estimate',          desc: "We provide an instant price estimate. If it doesn't feel right, negotiate directly with us." },
+              { Icon: Sparkles,   title: 'We Clean, You Relax',        desc: 'Our vetted FAM team arrives on time with everything needed and leaves your space spotless.' },
+            ] as { Icon: LucideIcon; title: string; desc: string }[]).map(({ Icon, title, desc }) => (
+              <div key={title} className="flex flex-col items-center relative z-10">
+                <div className="w-20 h-20 rounded-full bg-brand-500 text-white flex items-center justify-center mb-5 shadow-lg">
+                  <Icon size={32} />
                 </div>
                 <h3 className="font-display font-bold text-base text-gray-900 mb-2">{title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
