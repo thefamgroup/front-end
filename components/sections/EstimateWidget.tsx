@@ -126,11 +126,11 @@ export function EstimateWidget() {
 
       {/* Actions */}
       <div className="grid grid-cols-2 gap-2.5 mt-3">
-        <Link href="/quote" className="btn-primary text-sm px-4 py-2.5 justify-center">
+        <Link href="/quote" className="btn-primary text-sm px-3 py-2.5 justify-center whitespace-nowrap">
           Request Quote
         </Link>
-        <Link href="/contact" className="btn-outline text-sm px-4 py-2.5 justify-center">
-          Negotiate with Us
+        <Link href="/contact" className="btn-outline text-sm px-3 py-2.5 justify-center whitespace-nowrap">
+          Negotiate
         </Link>
       </div>
     </div>

@@ -155,7 +155,7 @@ export default function HomePage() {
       </div>
 
       {/* ── POPULAR SERVICES ──────────────────────────────────── */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-wide">
           <span className="section-tag">What We Offer</span>
           <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
@@ -234,7 +234,7 @@ export default function HomePage() {
       </section>
 
       {/* ── ADD-ONS ───────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f5f5f0]">
+      <section className="py-12 md:py-20 bg-[#f5f5f0]">
         <div className="container-wide">
           <span className="section-tag">Personalise Your Clean</span>
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -262,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TESTIMONIALS ──────────────────────────────────────── */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-wide">
           <span className="section-tag">Testimonials</span>
           <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-12">What Our Clients Think</h2>
@@ -275,7 +275,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY CHOOSE US ─────────────────────────────────────── */}
-      <section className="py-20 bg-[#f5f5f0]">
+      <section className="py-12 md:py-20 bg-[#f5f5f0]">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -312,8 +312,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Illustration panel */}
-            <div className="bg-brand-500 rounded-3xl min-h-[460px] flex items-center justify-center relative overflow-hidden">
+            {/* Illustration panel — hidden on mobile */}
+            <div className="hidden lg:flex bg-brand-500 rounded-3xl min-h-[460px] items-center justify-center relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5" aria-hidden="true" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-black/8" aria-hidden="true" />
               <SparkleIllustration />
@@ -345,7 +345,7 @@ export default function HomePage() {
       </div>
 
       {/* ── PRICING PREVIEW ───────────────────────────────────── */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-wide">
           <span className="section-tag">Offers &amp; Pricing</span>
           <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
@@ -385,7 +385,7 @@ export default function HomePage() {
       </section>
 
       {/* ── HOW IT WORKS ──────────────────────────────────────── */}
-      <section className="py-20 bg-[#f5f5f0]">
+      <section className="py-12 md:py-20 bg-[#f5f5f0]">
         <div className="container-wide text-center">
           <span className="section-tag">Book in 60 Seconds</span>
           <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-12">Quick &amp; Easy Booking Process</h2>
@@ -411,7 +411,7 @@ export default function HomePage() {
       </section>
 
       {/* ── BOOKING FORM ──────────────────────────────────────── */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <BookingForm />
@@ -451,7 +451,7 @@ export default function HomePage() {
       </section>
 
       {/* ── LOCATIONS ─────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f5f5f0]">
+      <section className="py-12 md:py-20 bg-[#f5f5f0]">
         <div className="container-wide">
           <span className="section-tag">Our Locations</span>
           <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-10">Areas We Serve</h2>
@@ -476,7 +476,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA ───────────────────────────────────────────────── */}
-      <section className="bg-brand-500 py-20 relative overflow-hidden">
+      <section className="bg-brand-500 py-12 md:py-20 relative overflow-hidden">
         <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/5" aria-hidden="true" />
         <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-black/8" aria-hidden="true" />
         <div className="container-wide text-center relative z-10">
