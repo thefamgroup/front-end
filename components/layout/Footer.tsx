@@ -134,6 +134,49 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Partner Companies */}
+      <div className="border-t border-gray-800">
+        <div className="container-wide py-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-5 text-center">
+            Family of Companies
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {[
+              {
+                name: 'Harsimiyou Solution Limited',
+                href: 'https://harsimiyuogroup.uk',
+                initials: 'HS',
+                accent: 'from-emerald-700 to-emerald-900',
+              },
+              {
+                name: 'Chrisbukem Limited',
+                href: 'https://chrisbukemlimited.com',
+                initials: 'CB',
+                accent: 'from-slate-600 to-slate-800',
+              },
+            ].map(({ name, href, initials, accent }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-brand-500/40 transition-all duration-200"
+              >
+                <span className={`w-9 h-9 rounded-lg bg-gradient-to-br ${accent} flex items-center justify-center text-white text-xs font-extrabold tracking-wide shrink-0`}>
+                  {initials}
+                </span>
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                  {name}
+                </span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600 group-hover:text-brand-400 transition-colors ml-1" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="container-wide py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
