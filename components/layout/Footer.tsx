@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Globe, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe } from 'lucide-react'
 import { CONTACT } from '@/lib/data'
 
 export function Footer() {
@@ -23,18 +23,20 @@ export function Footer() {
             </p>
             <div className="flex gap-2">
               {[
-                { icon: Facebook, label: 'Facebook',  href: '#' },
-                { icon: Instagram, label: 'Instagram', href: '#' },
-                { icon: Twitter,   label: 'Twitter',   href: '#' },
-                { icon: Linkedin,  label: 'LinkedIn',  href: '#' },
-              ].map(({ icon: Icon, label, href }) => (
+                { label: 'Facebook',  href: '#', path: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' },
+                { label: 'Instagram', href: '#', path: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01M6.5 2h11A4.5 4.5 0 0 1 22 6.5v11a4.5 4.5 0 0 1-4.5 4.5h-11A4.5 4.5 0 0 1 2 17.5v-11A4.5 4.5 0 0 1 6.5 2z' },
+                { label: 'X / Twitter', href: '#', path: 'M4 4l16 16M4 20L20 4' },
+                { label: 'LinkedIn', href: '#', path: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' },
+              ].map(({ label, href, path }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
                   className="w-9 h-9 rounded-lg bg-gray-800 hover:bg-brand-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
                 >
-                  <Icon size={16} />
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d={path} />
+                  </svg>
                 </a>
               ))}
             </div>
@@ -139,8 +141,12 @@ export function Footer() {
             © 2026 thefamgroup. All rights reserved. Family. Community. Care.
           </p>
           <div className="flex gap-5">
-            {['Privacy Policy', 'Terms of Service', 'Cookie Settings'].map((label) => (
-              <Link key={label} href="#" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
+            {[
+              { label: 'Privacy Policy',   href: '/privacy-policy' },
+              { label: 'Terms of Service', href: '/terms-of-service' },
+              { label: 'Cookie Settings',  href: '/cookies' },
+            ].map(({ label, href }) => (
+              <Link key={label} href={href} className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
                 {label}
               </Link>
             ))}
