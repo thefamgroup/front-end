@@ -25,36 +25,20 @@ export function QuoteCalculator() {
     condition: 'average',
     addons: [],
   })
-  const [step, setStep] = useState<'form' | 'result' | 'negotiate' | 'success'>('form')
-  const [negotiateMsg, setNegotiateMsg] = useState('')
-  const [negotiatePhone, setNegotiatePhone] = useState('')
+  const [step, setStep] = useState<'form' | 'result' | 'contact' | 'negotiate' | 'success'>('form')
   const [submitting, setSubmitting] = useState(false)
 
-  const quotePayload = () => ({
-    service: state.serviceType,
-    size: state.propertySize,
-    frequency: state.frequency,
-    condition: state.condition,
-    addons: state.addons.map((a) => a.label).join(', ') || 'None',
-    total: result.total,
-    breakdown: result.breakdown,
-  })
+  // Contact details (collected before submitting quote or negotiate)
+  const [contactName, setContactName] = useState('')
+  const [contactEmail, setContactEmail] = useState('')
+  const [contactPhone, setContactPhone] = useState('')
+  const [contactError, setContactError] = useState('')
 
-  const submitQuote = async (type: 'quote' | 'negotiate') => {
-    setSubmitting(true)
-    await fetch('/api/quote', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        type,
-        ...quotePayload(),
-        message: negotiateMsg,
-        phone: negotiatePhone,
-      }),
-    }).catch(() => {})
-    setSubmitting(false)
-    setStep('success')
-  }
+  // Negotiate-specific
+  const [negotiateMsg, setNegotiateMsg] = useState('')
+
+  // Which flow triggered the contact form
+  const [submitType, setSubmitType] = useState<'quote' | 'negotiate'>('quote')
 
   const result = calculateQuote(state)
 
@@ -74,6 +58,40 @@ export function QuoteCalculator() {
     `Hi thefamgroup! I'd like to request a quote.\n\nService: ${state.serviceType}\nProperty: ${state.propertySize}\nFrequency: ${state.frequency}\nEstimate: £${result.total}\n\nPlease confirm availability.`
   )
 
+  const openContactForm = (type: 'quote' | 'negotiate') => {
+    setSubmitType(type)
+    setContactError('')
+    setStep('contact')
+  }
+
+  const handleContactSubmit = async () => {
+    if (!contactName.trim()) { setContactError('Please enter your name.'); return }
+    if (!contactEmail.includes('@')) { setContactError('Please enter a valid email.'); return }
+    if (contactPhone.length < 10) { setContactError('Please enter a valid phone number.'); return }
+    setContactError('')
+    setSubmitting(true)
+    await fetch('/api/quote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: submitType,
+        name: contactName,
+        email: contactEmail,
+        phone: contactPhone,
+        service: state.serviceType,
+        size: state.propertySize,
+        frequency: state.frequency,
+        condition: state.condition,
+        addons: state.addons.map((a) => a.label).join(', ') || 'None',
+        total: result.total,
+        breakdown: result.breakdown,
+        message: submitType === 'negotiate' ? negotiateMsg : '',
+      }),
+    }).catch(() => {})
+    setSubmitting(false)
+    setStep('success')
+  }
+
   if (step === 'success') {
     return (
       <div className="text-center py-12">
@@ -88,7 +106,11 @@ export function QuoteCalculator() {
           <a href={CONTACT.phoneTel} className="btn-primary">
             <Phone size={16} /> Call {CONTACT.phone}
           </a>
-          <button onClick={() => { setState({ serviceType: 'regular', propertySize: 'studio', frequency: 'one-off', condition: 'average', addons: [] }); setStep('form') }} className="btn-outline">
+          <button onClick={() => {
+            setState({ serviceType: 'regular', propertySize: 'studio', frequency: 'one-off', condition: 'average', addons: [] })
+            setContactName(''); setContactEmail(''); setContactPhone(''); setNegotiateMsg('')
+            setStep('form')
+          }} className="btn-outline">
             Start New Quote
           </button>
         </div>
@@ -289,11 +311,10 @@ export function QuoteCalculator() {
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                onClick={() => submitQuote('quote')}
-                disabled={submitting}
-                className="btn-white text-sm px-5 py-2.5 disabled:opacity-60"
+                onClick={() => openContactForm('quote')}
+                className="btn-white text-sm px-5 py-2.5"
               >
-                <Check size={15} /> {submitting ? 'Sending…' : 'Request This Quote'}
+                <Check size={15} /> Request This Quote
               </button>
               <a
                 href={waUrl}
@@ -305,7 +326,7 @@ export function QuoteCalculator() {
               </a>
               <button
                 type="button"
-                onClick={() => setStep('negotiate')}
+                onClick={() => openContactForm('negotiate')}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/20 border border-white/30 text-white text-sm font-semibold hover:bg-white/30 transition-colors"
               >
                 💬 Negotiate with Us
@@ -318,41 +339,75 @@ export function QuoteCalculator() {
               </a>
             </div>
           </div>
+        </div>
+      )}
 
-          {/* Negotiate box */}
-          {step === 'negotiate' && (
-            <div className="mt-4 bg-gray-50 rounded-2xl p-5 border border-gray-200">
-              <h4 className="font-display font-bold text-gray-900 mb-1">Let's Talk About Your Budget</h4>
-              <p className="text-sm text-gray-500 mb-4">
-                Not happy with the estimate? Tell us your budget and priorities — we'll do our best to find a solution that works for both of us.
-              </p>
+      {/* Contact details + optional negotiate message */}
+      {step === 'contact' && (
+        <div className="mt-6 bg-gray-50 rounded-2xl p-5 border border-gray-200">
+          <button
+            type="button"
+            onClick={() => setStep(submitType === 'negotiate' ? 'negotiate' : 'result')}
+            className="text-xs text-gray-400 hover:text-gray-600 mb-3 flex items-center gap-1"
+          >
+            ← Back to estimate
+          </button>
+          <h4 className="font-display font-bold text-gray-900 mb-1">
+            {submitType === 'negotiate' ? 'Your Details & Budget' : 'Your Contact Details'}
+          </h4>
+          <p className="text-sm text-gray-500 mb-4">
+            So we can get back to you with a confirmed price.
+          </p>
+
+          <div className="space-y-3">
+            <input
+              type="text"
+              value={contactName}
+              onChange={(e) => setContactName(e.target.value)}
+              placeholder="Full name"
+              className="input-field"
+              autoComplete="name"
+            />
+            <input
+              type="email"
+              value={contactEmail}
+              onChange={(e) => setContactEmail(e.target.value)}
+              placeholder="Email address"
+              className="input-field"
+              autoComplete="email"
+            />
+            <input
+              type="tel"
+              value={contactPhone}
+              onChange={(e) => setContactPhone(e.target.value)}
+              placeholder="Phone / WhatsApp number"
+              className="input-field"
+              autoComplete="tel"
+            />
+
+            {submitType === 'negotiate' && (
               <textarea
                 value={negotiateMsg}
                 onChange={(e) => setNegotiateMsg(e.target.value)}
-                placeholder="e.g. My budget is around £120. The kitchen and bathrooms are most important. Can we work something out?"
-                className="input-field resize-none h-24 mb-3"
+                placeholder="e.g. My budget is around £120. Kitchen and bathrooms are most important. Can we work something out?"
+                className="input-field resize-none h-24"
                 aria-label="Negotiation message"
               />
-              <div className="flex gap-2">
-                <input
-                  type="tel"
-                  value={negotiatePhone}
-                  onChange={(e) => setNegotiatePhone(e.target.value)}
-                  placeholder="Your phone number"
-                  className="input-field flex-1"
-                  aria-label="Phone number for callback"
-                />
-                <button
-                  type="button"
-                  onClick={() => submitQuote('negotiate')}
-                  disabled={submitting}
-                  className="btn-primary px-5 whitespace-nowrap disabled:opacity-60"
-                >
-                  {submitting ? 'Sending…' : 'Send →'}
-                </button>
-              </div>
-            </div>
-          )}
+            )}
+
+            {contactError && (
+              <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-2">{contactError}</p>
+            )}
+
+            <button
+              type="button"
+              onClick={handleContactSubmit}
+              disabled={submitting}
+              className="btn-primary w-full justify-center py-3 disabled:opacity-60"
+            >
+              {submitting ? 'Sending…' : submitType === 'negotiate' ? 'Send Negotiation →' : 'Send Quote Request →'}
+            </button>
+          </div>
         </div>
       )}
     </div>
