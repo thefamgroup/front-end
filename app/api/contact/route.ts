@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
           <hr style="border:none;border-top:1px solid #e5e5e5;margin:20px 0"/>
           <p style="font-weight:600;color:#555;margin:0 0 8px">Message</p>
           <p style="background:white;padding:16px;border-radius:8px;border:1px solid #e5e5e5;margin:0;line-height:1.6">${message.replace(/\n/g, '<br/>')}</p>
-          <p style="margin:24px 0 0;font-size:12px;color:#999">Sent from thefamgroup.co.uk contact form</p>
+          <p style="margin:24px 0 0;font-size:12px;color:#999">Sent from thefamgroup.uk contact form</p>
         </div>
       </div>
     `,

@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
             <tr><td style="padding:8px 0;font-weight:600;color:#555">Bedrooms</td><td style="padding:8px 0">${bedrooms}</td></tr>
             ${message ? `<tr><td style="padding:8px 0;font-weight:600;color:#555">Notes</td><td style="padding:8px 0">${message}</td></tr>` : ''}
           </table>
-          <p style="margin:24px 0 0;font-size:12px;color:#999">Sent from thefamgroup.co.uk booking form</p>
+          <p style="margin:24px 0 0;font-size:12px;color:#999">Sent from thefamgroup.uk booking form</p>
         </div>
       </div>
     `,

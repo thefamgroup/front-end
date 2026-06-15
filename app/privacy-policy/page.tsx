@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
         <div className="prose prose-gray max-w-none space-y-8 text-gray-600 leading-relaxed">
           <section>
             <h2 className="font-display text-xl font-bold text-gray-900 mb-3">1. Who We Are</h2>
-            <p>thefamgroup (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) provides professional cleaning services across Manchester and Crewe. Our website is <strong>www.thefamgroup.co.uk</strong>. For any privacy-related queries, contact us at <a href={`mailto:${CONTACT.email}`} className="text-brand-500 hover:underline">{CONTACT.email}</a>.</p>
+            <p>thefamgroup (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) provides professional cleaning services across Manchester and Crewe. Our website is <strong>thefamgroup.uk</strong>. For any privacy-related queries, contact us at <a href={`mailto:${CONTACT.email}`} className="text-brand-500 hover:underline">{CONTACT.email}</a>.</p>
           </section>
 
           <section>

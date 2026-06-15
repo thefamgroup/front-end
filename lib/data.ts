@@ -7,7 +7,7 @@ export const CONTACT = {
   phone: '07769 240 184',
   phoneTel: 'tel:07769240184',
   email: 'thefamgrouphq@gmail.com',
-  website: 'www.thefamgroup.co.uk',
+  website: 'thefamgroup.uk',
   locations: ['Manchester', 'Crewe'],
   tagline: 'Family. Community. Care.',
 }

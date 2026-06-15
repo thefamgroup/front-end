@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
           <p style="background:white;padding:12px 16px;border-radius:8px;border:1px solid #e5e5e5;margin:0">
             <a href="mailto:${email}" style="color:#3a7d44">${email}</a>
           </p>
-          <p style="margin:24px 0 0;font-size:12px;color:#999">Signed up via thefamgroup.co.uk footer newsletter form</p>
+          <p style="margin:24px 0 0;font-size:12px;color:#999">Signed up via thefamgroup.uk footer newsletter form</p>
         </div>
       </div>
     `,

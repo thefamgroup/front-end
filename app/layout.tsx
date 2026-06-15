@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'thefamgroup — Professional Cleaning Services',
     description: 'Trusted, vetted cleaning services for homes and businesses in Manchester and Crewe.',
-    url: 'https://www.thefamgroup.co.uk',
+    url: 'https://thefamgroup.uk',
     siteName: 'thefamgroup',
     locale: 'en_GB',
     type: 'website',
