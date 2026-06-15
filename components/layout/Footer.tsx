@@ -1,10 +1,25 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Globe } from 'lucide-react'
 import { CONTACT } from '@/lib/data'
 
 export function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterState, setNewsletterState] = useState<'idle' | 'sending' | 'done'>('idle')
+
+  const handleNewsletter = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!newsletterEmail.includes('@')) return
+    setNewsletterState('sending')
+    await fetch('/api/newsletter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: newsletterEmail }),
+    }).catch(() => {})
+    setNewsletterState('done')
+  }
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
       <div className="container-wide py-14">
@@ -46,20 +61,28 @@ export function Footer() {
               <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
                 Stay in the loop
               </p>
-              <form className="flex gap-0" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 px-3.5 py-2.5 bg-gray-800 border border-gray-700 rounded-l-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-400"
-                  aria-label="Email for newsletter"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-r-lg transition-colors whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
+              {newsletterState === 'done' ? (
+                <p className="text-sm text-brand-400 font-medium py-2">Thanks — you're on the list!</p>
+              ) : (
+                <form className="flex gap-0" onSubmit={handleNewsletter}>
+                  <input
+                    type="email"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    className="flex-1 px-3.5 py-2.5 bg-gray-800 border border-gray-700 rounded-l-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-400"
+                    aria-label="Email for newsletter"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterState === 'sending'}
+                    className="px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-r-lg transition-colors whitespace-nowrap disabled:opacity-60"
+                  >
+                    {newsletterState === 'sending' ? '…' : 'Subscribe'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
 

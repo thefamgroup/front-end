@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { Check, Phone, MessageCircle } from 'lucide-react'
 import { ADDONS, FREQ_SAVINGS } from '@/lib/data'
 import { calculateQuote, buildWhatsAppUrl } from '@/lib/utils'
@@ -29,6 +28,33 @@ export function QuoteCalculator() {
   const [step, setStep] = useState<'form' | 'result' | 'negotiate' | 'success'>('form')
   const [negotiateMsg, setNegotiateMsg] = useState('')
   const [negotiatePhone, setNegotiatePhone] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+
+  const quotePayload = () => ({
+    service: state.serviceType,
+    size: state.propertySize,
+    frequency: state.frequency,
+    condition: state.condition,
+    addons: state.addons.map((a) => a.label).join(', ') || 'None',
+    total: result.total,
+    breakdown: result.breakdown,
+  })
+
+  const submitQuote = async (type: 'quote' | 'negotiate') => {
+    setSubmitting(true)
+    await fetch('/api/quote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type,
+        ...quotePayload(),
+        message: negotiateMsg,
+        phone: negotiatePhone,
+      }),
+    }).catch(() => {})
+    setSubmitting(false)
+    setStep('success')
+  }
 
   const result = calculateQuote(state)
 
@@ -263,10 +289,11 @@ export function QuoteCalculator() {
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                onClick={() => setStep('success')}
-                className="btn-white text-sm px-5 py-2.5"
+                onClick={() => submitQuote('quote')}
+                disabled={submitting}
+                className="btn-white text-sm px-5 py-2.5 disabled:opacity-60"
               >
-                <Check size={15} /> Request This Quote
+                <Check size={15} /> {submitting ? 'Sending…' : 'Request This Quote'}
               </button>
               <a
                 href={waUrl}
@@ -317,10 +344,11 @@ export function QuoteCalculator() {
                 />
                 <button
                   type="button"
-                  onClick={() => setStep('success')}
-                  className="btn-primary px-5 whitespace-nowrap"
+                  onClick={() => submitQuote('negotiate')}
+                  disabled={submitting}
+                  className="btn-primary px-5 whitespace-nowrap disabled:opacity-60"
                 >
-                  Send →
+                  {submitting ? 'Sending…' : 'Send →'}
                 </button>
               </div>
             </div>

@@ -19,13 +19,23 @@ type FormData = z.infer<typeof schema>
 
 export function ContactForm() {
   const [sent, setSent] = useState(false)
+  const [serverError, setServerError] = useState('')
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = async (_data: FormData) => {
-    await new Promise((r) => setTimeout(r, 800))
-    setSent(true)
+  const onSubmit = async (data: FormData) => {
+    setServerError('')
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+    if (res.ok) {
+      setSent(true)
+    } else {
+      setServerError('Something went wrong. Please try again or call us directly.')
+    }
   }
 
   if (sent) {
@@ -86,6 +96,9 @@ export function ContactForm() {
           <textarea id="message" {...register('message')} className="input-field resize-none h-32" placeholder="Tell us what you need, your location, and any other details..." />
           {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message.message}</p>}
         </div>
+        {serverError && (
+          <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{serverError}</p>
+        )}
         <button type="submit" disabled={isSubmitting} className="btn-primary w-full justify-center py-4 text-base disabled:opacity-60">
           {isSubmitting ? 'Sending...' : 'Send Message →'}
         </button>

@@ -20,6 +20,7 @@ type FormData = z.infer<typeof schema>
 
 export function BookingForm() {
   const [sent, setSent] = useState(false)
+  const [serverError, setServerError] = useState('')
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -28,9 +29,18 @@ export function BookingForm() {
     }
   })
 
-  const onSubmit = async (_data: FormData) => {
-    await new Promise((r) => setTimeout(r, 800))
-    setSent(true)
+  const onSubmit = async (data: FormData) => {
+    setServerError('')
+    const res = await fetch('/api/booking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+    if (res.ok) {
+      setSent(true)
+    } else {
+      setServerError('Something went wrong. Please try again or call us directly.')
+    }
   }
 
   if (sent) {
@@ -101,6 +111,9 @@ export function BookingForm() {
           <label htmlFor="bk-notes" className="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1.5">Additional Notes</label>
           <textarea id="bk-notes" {...register('message')} className="input-field resize-none h-24" placeholder="Anything we should know? Pets, access instructions, specific areas..." />
         </div>
+        {serverError && (
+          <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{serverError}</p>
+        )}
         <button type="submit" disabled={isSubmitting} className="btn-primary w-full justify-center py-4 text-base disabled:opacity-60">
           {isSubmitting ? 'Sending...' : 'Send Enquiry →'}
         </button>
