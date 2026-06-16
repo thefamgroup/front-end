@@ -33,10 +33,10 @@ export default function ContactPage() {
               <h2 className="font-display font-bold text-2xl text-gray-900 mb-6">Contact Information</h2>
               <div className="space-y-4 mb-8">
                 {[
-                  { icon: '📞', title: 'Call or WhatsApp', value: CONTACT.phone, href: CONTACT.phoneTel, sub: 'Mon – Sat, 8am – 7pm' },
+                  { icon: '📞', title: 'Phone', value: CONTACT.phone, href: CONTACT.phoneTel, sub: 'Mon – Sat, 8am – 7pm' },
+                  { icon: '💬', title: 'WhatsApp', value: 'Message us on WhatsApp', href: CONTACT.whatsapp, sub: 'Fastest way to reach us' },
                   { icon: '✉️', title: 'Email', value: CONTACT.email, href: `mailto:${CONTACT.email}`, sub: 'We respond within 2 hours' },
                   { icon: '📍', title: 'Areas We Cover', value: 'Manchester, Crewe & surrounding areas', href: undefined, sub: 'Expanding soon' },
-                  { icon: '🌐', title: 'Website', value: CONTACT.website, href: undefined, sub: '' },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4 p-4 bg-[#f5f5f0] rounded-2xl">
                     <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center text-xl flex-shrink-0 shadow-sm">

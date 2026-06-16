@@ -5,7 +5,7 @@ import type { PriceItem } from '@/types'
 
 export const metadata: Metadata = {
   title: 'Prices',
-  description: 'Transparent cleaning service prices for Manchester and Crewe. No hidden fees.',
+  description: 'Cleaning prices for Manchester and Crewe. Standard clean from £60, deep clean from £140, end of tenancy from £149. No hidden fees, no contracts. Recurring discounts up to 20%.',
 }
 
 function PriceTable({ items, cols }: { items: PriceItem[]; cols: string[] }) {

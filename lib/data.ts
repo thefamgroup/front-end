@@ -6,6 +6,7 @@ import type {
 export const CONTACT = {
   phone: '07769 240 184',
   phoneTel: 'tel:07769240184',
+  whatsapp: 'https://wa.me/447769240184?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services',
   email: 'thefamgrouphq@gmail.com',
   website: 'thefamgroup.uk',
   locations: ['Manchester', 'Crewe'],

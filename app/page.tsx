@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {
   Check, Phone, ChevronRight, Star,
-  Shield, FileText, BadgeCheck, Calendar, Tag, Clock, MapPin, Mail,
+  Shield, FileText, BadgeCheck, Calendar, Tag, MapPin, Mail, MessageCircle,
   Flame, Snowflake, AppWindow, WashingMachine, Sofa, Layers,
   Building2, Key, RefreshCw, Sparkles,
 } from 'lucide-react'
@@ -57,11 +57,29 @@ function HouseIllustration() {
 
 function SparkleIllustration() {
   return (
-    <svg width="96" height="96" viewBox="0 0 96 96" fill="none" aria-hidden="true">
-      <circle cx="48" cy="48" r="44" fill="white" fillOpacity="0.08"/>
-      <path d="M48 12 L52 40 L80 44 L52 48 L48 76 L44 48 L16 44 L44 40 Z" fill="white" fillOpacity="0.4" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
-      <path d="M20 20 L22 28 L30 30 L22 32 L20 40 L18 32 L10 30 L18 28 Z" fill="white" fillOpacity="0.25" stroke="white" strokeWidth="1" strokeLinejoin="round"/>
-      <path d="M76 56 L77.5 62 L84 63.5 L77.5 65 L76 71 L74.5 65 L68 63.5 L74.5 62 Z" fill="white" fillOpacity="0.25" stroke="white" strokeWidth="1" strokeLinejoin="round"/>
+    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <circle cx="100" cy="100" r="95" fill="white" fillOpacity="0.04"/>
+      <circle cx="100" cy="100" r="70" fill="white" fillOpacity="0.04"/>
+      <circle cx="100" cy="100" r="46" fill="white" fillOpacity="0.06"/>
+      {/* Main large sparkle */}
+      <path d="M100 30 L107 80 L157 88 L107 96 L100 148 L93 96 L43 88 L93 80 Z"
+        fill="white" fillOpacity="0.35" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
+      {/* Medium sparkle — top right */}
+      <path d="M158 38 L161 54 L177 57 L161 60 L158 76 L155 60 L139 57 L155 54 Z"
+        fill="white" fillOpacity="0.22" stroke="white" strokeWidth="1" strokeLinejoin="round"/>
+      {/* Small sparkle — bottom left */}
+      <path d="M42 130 L44.5 142 L57 144.5 L44.5 147 L42 159 L39.5 147 L27 144.5 L39.5 142 Z"
+        fill="white" fillOpacity="0.20" strokeLinejoin="round"/>
+      {/* Tiny sparkle — top left */}
+      <path d="M32 52 L34 61 L43 63 L34 65 L32 74 L30 65 L21 63 L30 61 Z"
+        fill="white" fillOpacity="0.18" strokeLinejoin="round"/>
+      {/* Accent dots */}
+      <circle cx="168" cy="120" r="5" fill="white" fillOpacity="0.25"/>
+      <circle cx="174" cy="133" r="3" fill="white" fillOpacity="0.18"/>
+      <circle cx="28" cy="98" r="4" fill="white" fillOpacity="0.20"/>
+      <circle cx="168" cy="53" r="3" fill="white" fillOpacity="0.20"/>
+      <circle cx="78" cy="168" r="4" fill="white" fillOpacity="0.15"/>
+      <circle cx="125" cy="172" r="3" fill="white" fillOpacity="0.15"/>
     </svg>
   )
 }
@@ -340,9 +358,19 @@ export default function HomePage() {
               <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5" aria-hidden="true" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-black/8" aria-hidden="true" />
               <SparkleIllustration />
+              {/* Stat — bottom left */}
               <div className="absolute bottom-6 left-6 bg-white rounded-2xl px-5 py-4 shadow-card">
                 <div className="font-display text-3xl font-extrabold text-brand-500">500+</div>
                 <div className="text-xs text-gray-400 mt-0.5">Cleans completed</div>
+              </div>
+              {/* Stat — top right */}
+              <div className="absolute top-6 right-6 bg-white rounded-2xl px-4 py-3 shadow-card text-center">
+                <div className="font-display text-2xl font-extrabold text-amber-500">5 ★</div>
+                <div className="text-xs text-gray-400">Rated service</div>
+              </div>
+              {/* Badge — top left */}
+              <div className="absolute top-6 left-6 bg-white/15 backdrop-blur-sm border border-white/25 rounded-xl px-3 py-2">
+                <div className="text-xs font-bold text-white">✓ DBS Checked</div>
               </div>
             </div>
           </div>
@@ -451,10 +479,10 @@ export default function HomePage() {
               </p>
               <div className="grid gap-4">
                 {([
-                  { Icon: Phone,  title: 'Call or WhatsApp', value: CONTACT.phone, href: CONTACT.phoneTel },
-                  { Icon: Mail,   title: 'Email Us',         value: CONTACT.email, href: `mailto:${CONTACT.email}` },
-                  { Icon: MapPin, title: 'Areas We Cover',   value: 'Manchester, Crewe & surrounding areas', href: undefined },
-                  { Icon: Clock,  title: 'Response Time',    value: 'We reply within 2 hours, Mon–Sat', href: undefined },
+                  { Icon: Phone,         title: 'Phone',          value: CONTACT.phone,  href: CONTACT.phoneTel },
+                  { Icon: MessageCircle, title: 'WhatsApp',       value: 'Message us directly', href: CONTACT.whatsapp },
+                  { Icon: Mail,          title: 'Email Us',       value: CONTACT.email,  href: `mailto:${CONTACT.email}` },
+                  { Icon: MapPin,        title: 'Areas We Cover', value: 'Manchester, Crewe & surrounding areas', href: undefined },
                 ] as { Icon: LucideIcon; title: string; value: string; href: string | undefined }[]).map((item) => (
                   <div key={item.title} className="flex items-center gap-4 p-4 bg-[#f5f5f0] rounded-2xl">
                     <div className="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">

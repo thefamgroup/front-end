@@ -5,7 +5,7 @@ import { TESTIMONIALS, CONTACT } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about thefamgroup — a family-built cleaning team serving Manchester and Crewe.',
+  description: 'Meet thefamgroup — Manchester and Crewe\'s trusted family cleaning team. DBS-checked, fully insured, with 500+ cleans completed. Family values, professional results.',
 }
 
 export default function AboutPage() {

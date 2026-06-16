@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Professional residential and commercial cleaning services in Manchester and Crewe.',
+  description: 'Home cleaning, deep clean, end of tenancy, office cleaning and more in Manchester and Crewe. DBS-checked, fully insured, no contracts. Book online or get an instant quote.',
 }
 
 function ServiceCard({ service }: { service: typeof RESIDENTIAL_SERVICES[0] }) {
