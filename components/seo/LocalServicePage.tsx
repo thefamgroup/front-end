@@ -2,6 +2,14 @@ import { Phone, MessageCircle, CheckCircle, ChevronRight, MapPin, Star } from 'l
 import type { ServiceData, LocationData } from '@/lib/seo-data'
 import { interpolate, CONTACT, LOCATIONS } from '@/lib/seo-data'
 import { LocalBusinessSchema } from './LocalBusinessSchema'
+import {
+  IllustrationShield,
+  IllustrationStar,
+  IllustrationCalendar,
+  IllustrationPound,
+  IllustrationLeaf,
+  IllustrationChat,
+} from '@/components/icons/ServiceIllustrations'
 import Link from 'next/link'
 
 interface Props {
@@ -161,40 +169,40 @@ export function LocalServicePage({ service, location }: Props) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
-                icon: '🛡',
+                Illustration: IllustrationShield,
                 title: 'DBS-Checked & Insured',
                 body: `Every cleaner serving ${location.name} is DBS-checked, reference-verified, and covered by our £5M public liability insurance.`,
               },
               {
-                icon: '⭐',
+                Illustration: IllustrationStar,
                 title: 'Satisfaction Guaranteed',
                 body: 'Not happy? We return and put it right — free of charge. We don\'t cut corners and we don\'t accept jobs that don\'t meet our standard.',
               },
               {
-                icon: '📅',
+                Illustration: IllustrationCalendar,
                 title: 'Flexible Scheduling',
                 body: `We work 7 days a week across ${location.name} and ${location.postcode}. Early mornings, evenings, and weekend slots available.`,
               },
               {
-                icon: '💷',
+                Illustration: IllustrationPound,
                 title: 'Transparent Pricing',
                 body: 'No hidden fees, no surprise charges. Your price is confirmed before we start. Pay after the job — never upfront.',
               },
               {
-                icon: '🌿',
+                Illustration: IllustrationLeaf,
                 title: 'Eco-Friendly Option',
                 body: '100% biodegradable, non-toxic products available at no extra charge. Safe for children, pets, and the environment.',
               },
               {
-                icon: '💬',
+                Illustration: IllustrationChat,
                 title: 'Fast Response',
                 body: 'WhatsApp, call, or email. We respond within 2 hours during business hours. Same-day quotes available on request.',
               },
-            ].map(f => (
-              <div key={f.title} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <div className="text-3xl mb-3">{f.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{f.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{f.body}</p>
+            ].map(({ Illustration, title, body }) => (
+              <div key={title} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <Illustration className="w-14 h-14 mb-4" />
+                <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
               </div>
             ))}
           </div>

@@ -1,24 +1,37 @@
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { BASE_PRICES, SIZE_MULT, FREQ_MULT, COND_MULT } from './data'
-import type { QuoteState } from '@/types'
+import type { QuoteState, PricingConfig } from '@/types'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function calculateQuote(state: QuoteState): {
+export function calculateQuote(
+  state: QuoteState,
+  pricing?: PricingConfig,
+): {
   base: number
   addonsTotal: number
   total: number
   breakdown: string
 } {
-  const base = BASE_PRICES[state.serviceType] ?? 80
-  const sizeM = SIZE_MULT[state.propertySize] ?? 1
-  const freqM = FREQ_MULT[state.frequency] ?? 1
-  const condM = COND_MULT[state.condition] ?? 1
+  const basePrices = pricing?.BASE_PRICES ?? BASE_PRICES
+  const sizeMult   = pricing?.SIZE_MULT   ?? SIZE_MULT
+  const freqMult   = pricing?.FREQ_MULT   ?? FREQ_MULT
+  const condMult   = pricing?.COND_MULT   ?? COND_MULT
+  const addonPrices = pricing?.ADDON_PRICES
+
+  const base   = basePrices[state.serviceType] ?? 80
+  const sizeM  = sizeMult[state.propertySize]  ?? 1
+  const freqM  = freqMult[state.frequency]     ?? 1
+  const condM  = condMult[state.condition]     ?? 1
   const subtotal = Math.round(base * sizeM * condM * freqM)
-  const addonsTotal = state.addons.reduce((sum, a) => sum + a.price, 0)
+
+  const addonsTotal = state.addons.reduce((sum, a) => {
+    const price = addonPrices?.[a.id] ?? a.price
+    return sum + price
+  }, 0)
   const total = subtotal + addonsTotal
 
   const parts: string[] = [`Base service: £${subtotal}`]

@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { Figtree } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thefamgroup.uk'),
@@ -62,7 +66,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={cn("font-sans", figtree.variable)}>
       <body className="antialiased">
         <Navbar />
         <main id="main-content">{children}</main>

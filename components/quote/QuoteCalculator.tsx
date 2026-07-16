@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Check, Phone, MessageCircle } from 'lucide-react'
 import { ADDONS, FREQ_SAVINGS } from '@/lib/data'
 import { calculateQuote, buildWhatsAppUrl } from '@/lib/utils'
 import { cn } from '@/lib/utils'
 import { CONTACT } from '@/lib/data'
-import type { ServiceType, PropertySize, Frequency, Condition, AddOn, QuoteState } from '@/types'
+import type { ServiceType, PropertySize, Frequency, Condition, AddOn, QuoteState, PricingConfig } from '@/types'
 
 type Step = { id: number; label: string }
 const STEPS: Step[] = [
@@ -25,7 +25,15 @@ export function QuoteCalculator() {
     condition: 'average',
     addons: [],
   })
+  const [pricing, setPricing] = useState<PricingConfig | null>(null)
   const [step, setStep] = useState<'form' | 'result' | 'contact' | 'negotiate' | 'success'>('form')
+
+  useEffect(() => {
+    fetch('/api/pricing')
+      .then((r) => r.json())
+      .then((data: PricingConfig) => setPricing(data))
+      .catch(() => { /* use hardcoded defaults in calculateQuote */ })
+  }, [])
   const [submitting, setSubmitting] = useState(false)
 
   // Contact details (collected before submitting quote or negotiate)
@@ -40,7 +48,7 @@ export function QuoteCalculator() {
   // Which flow triggered the contact form
   const [submitType, setSubmitType] = useState<'quote' | 'negotiate'>('quote')
 
-  const result = calculateQuote(state)
+  const result = calculateQuote(state, pricing ?? undefined)
 
   const toggleAddon = (addon: AddOn) => {
     setState((prev) => ({

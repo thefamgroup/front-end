@@ -30,6 +30,16 @@ export interface QuoteState {
   addons: AddOn[]
 }
 
+// ── Pricing Config (from admin backend) ───────────────────────────
+
+export interface PricingConfig {
+  BASE_PRICES: Record<string, number>
+  SIZE_MULT: Record<string, number>
+  FREQ_MULT: Record<string, number>
+  COND_MULT: Record<string, number>
+  ADDON_PRICES: Record<string, number>
+}
+
 // ── Pricing ──────────────────────────────────────────────────────
 
 export interface PriceItem {
