@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { SERVICES, LOCATIONS } from '@/lib/seo-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://thefamgroup.uk'
+  const base = 'https://www.thefamgroup.uk'
   const now = new Date()
 
   const staticPages: MetadataRoute.Sitemap = [

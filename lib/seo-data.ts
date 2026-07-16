@@ -1193,7 +1193,7 @@ export const CONTACT = {
   whatsapp: 'https://wa.me/447769240184',
   email: 'thefamgrouphq@gmail.com',
   website: 'thefamgroup.uk',
-  siteUrl: 'https://thefamgroup.uk',
+  siteUrl: 'https://www.thefamgroup.uk',
   businessName: 'thefamgroup',
   address: 'Manchester & Crewe, UK',
 }
