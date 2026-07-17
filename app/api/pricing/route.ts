@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 
-// Default pricing — used as fallback if admin backend is unreachable
+const ADMIN_API = process.env.ADMIN_API_URL || 'https://tfg-admin-api.onrender.com/api'
+
 const DEFAULTS = {
   BASE_PRICES: { regular: 60, deep: 140, eot: 149, moveout: 155, office: 95, postconstruction: 200, airbnb: 75 },
   SIZE_MULT: { studio: 1, '1bed': 1.1, '2bed': 1.35, '3bed': 1.65, '4bed': 2.1 },
@@ -9,25 +10,24 @@ const DEFAULTS = {
   ADDON_PRICES: { oven: 45, fridge: 25, windows: 30, carpet: 40, upholstery: 55, laundry: 20, cupboards: 35, sameday: 25 },
 }
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
-  const adminUrl = process.env.NEXT_PUBLIC_API_URL || process.env.ADMIN_API_URL
-  if (adminUrl) {
-    try {
-      const res = await fetch(`${adminUrl}/settings/pricing-config`, {
-        next: { revalidate: 300 }, // cache for 5 minutes
+  try {
+    const res = await fetch(`${ADMIN_API}/settings/pricing-config`, {
+      cache: 'no-store',
+    })
+    if (res.ok) {
+      const data = await res.json()
+      return NextResponse.json(data, {
+        headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30' },
       })
-      if (res.ok) {
-        const data = await res.json()
-        return NextResponse.json(data, {
-          headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60' },
-        })
-      }
-    } catch {
-      // fall through to defaults
     }
+  } catch {
+    // admin backend unreachable — return hardcoded defaults
   }
 
   return NextResponse.json(DEFAULTS, {
-    headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60' },
+    headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30' },
   })
 }
