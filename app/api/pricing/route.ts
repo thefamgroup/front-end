@@ -10,17 +10,23 @@ const DEFAULTS = {
   ADDON_PRICES: { oven: 45, fridge: 25, windows: 30, carpet: 40, upholstery: 55, laundry: 20, cupboards: 35, sameday: 25 },
 }
 
+// Force this route to always run on the server — never static, never CDN cached
 export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export async function GET() {
   try {
     const res = await fetch(`${ADMIN_API}/settings/pricing-config`, {
       cache: 'no-store',
+      headers: { 'Accept': 'application/json' },
     })
     if (res.ok) {
       const data = await res.json()
       return NextResponse.json(data, {
-        headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30' },
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate',
+          'Pragma': 'no-cache',
+        },
       })
     }
   } catch {
@@ -28,6 +34,9 @@ export async function GET() {
   }
 
   return NextResponse.json(DEFAULTS, {
-    headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30' },
+    headers: {
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'Pragma': 'no-cache',
+    },
   })
 }
