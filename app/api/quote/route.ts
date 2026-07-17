@@ -73,5 +73,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
   }
 
+  // Also write to admin inbox
+  const adminApi = process.env.ADMIN_API_URL || 'https://tfg-admin-api.onrender.com/api'
+  const internalKey = process.env.INTERNAL_API_KEY
+  if (internalKey) {
+    fetch(`${adminApi}/inbox/public`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': internalKey },
+      body: JSON.stringify({
+        senderName: name,
+        senderEmail: email,
+        senderPhone: phone || undefined,
+        source: 'web',
+        subject,
+        body: `Service: ${service}\nSize: ${size}\nFrequency: ${frequency}\nCondition: ${condition}\nAdd-ons: ${addons || 'None'}\nEstimate: £${total}\n${breakdown ? `\nBreakdown: ${breakdown}` : ''}${isNegotiate && message ? `\n\nCustomer message:\n${message}` : ''}`,
+      }),
+    }).catch(() => {})
+  }
+
   return NextResponse.json({ ok: true })
 }
