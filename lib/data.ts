@@ -4,9 +4,9 @@ import type {
 
 // ── Contact ──────────────────────────────────────────────────────
 export const CONTACT = {
-  phone: '07767 759 013',
-  phoneTel: 'tel:07767759013',
-  whatsapp: 'https://wa.me/447767759013?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services',
+  phone: '07769 240 184',
+  phoneTel: 'tel:07769240184',
+  whatsapp: 'https://wa.me/447769240184?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services',
   email: 'info@thefamgroup.uk',
   website: 'thefamgroup.uk',
   locations: ['Manchester', 'Crewe'],
