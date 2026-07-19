@@ -30,7 +30,7 @@ export function LocalServicePage({ service, location }: Props) {
   const waMessage = encodeURIComponent(
     `Hi thefamgroup! I need ${service.shortName} in ${location.name} (${location.postcode}). Can you give me a quote?`
   )
-  const waUrl = `https://wa.me/447769240184?text=${waMessage}`
+  const waUrl = `https://wa.me/447767759013?text=${waMessage}`
 
   return (
     <>
