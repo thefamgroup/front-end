@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const TO = 'thefamgrouphq@gmail.com'
+const TO = 'info@thefamgroup.uk'
 
 export async function POST(req: NextRequest) {
   const { firstName, lastName, email, phone, enquiry, message } = await req.json()

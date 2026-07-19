@@ -11,7 +11,7 @@ const FAQS = [
   { q: 'What if I\'m not happy with the clean?', a: 'Contact us within 24 hours and we\'ll return and put it right completely free of charge. Your satisfaction is guaranteed — that\'s the FAM promise.' },
   { q: 'Do you bring your own cleaning supplies?', a: 'Yes, we bring all standard cleaning supplies. If you\'d prefer eco-friendly, non-toxic products, just add the Eco-Friendly Upgrade to your booking for a small additional charge.' },
   { q: 'Can I get a discount for regular bookings?', a: 'Absolutely. Weekly clients save 20%, fortnightly clients save 15%, and monthly clients save 10% compared to our one-off rates. Discounts are applied automatically.' },
-  { q: 'Do you cover my area?', a: 'We currently cover Manchester and Crewe and their surrounding areas. We\'re expanding — if you\'re not sure, give us a call on 07769 240 184 or drop us a message.' },
+  { q: 'Do you cover my area?', a: 'We currently cover Manchester and Crewe and their surrounding areas. We\'re expanding — if you\'re not sure, give us a call on 07767 759 013 or drop us a message.' },
 ]
 
 export function FaqAccordion() {

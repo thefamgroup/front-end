@@ -18,7 +18,7 @@ export function LocalBusinessSchema({ service, location }: Props) {
         '@id': `${CONTACT.siteUrl}/#business`,
         name: 'thefamgroup',
         url: CONTACT.siteUrl,
-        telephone: '07769240184',
+        telephone: '07767759013',
         email: CONTACT.email,
         description: 'Professional residential and commercial cleaning services across Manchester and Crewe. DBS-checked, fully insured. Family. Community. Care.',
         address: {

@@ -41,7 +41,7 @@ export const SERVICES: ServiceData[] = [
     name: 'End of Tenancy Cleaning',
     shortName: 'End of Tenancy',
     tagline: 'Get your full deposit back — guaranteed.',
-    metaDescription: 'Professional end of tenancy cleaning in {location} from £110. Letting agent approved standard. DBS-checked team, certificate of clean provided. Call 07769 240 184.',
+    metaDescription: 'Professional end of tenancy cleaning in {location} from £110. Letting agent approved standard. DBS-checked team, certificate of clean provided. Call 07767 759 013.',
     h1Template: 'End of Tenancy Cleaning in {location}',
     intro: 'Moving out of a property in {location}? Our end of tenancy cleaning service is fully approved to letting agent and inventory clerk standards. We clean every room to inspection level, provide a certificate of clean, and back it with our deposit-return guarantee. Our DBS-checked team covers {postcode} and the surrounding area — weekdays, weekends, and short notice available.',
     included: [
@@ -66,7 +66,7 @@ export const SERVICES: ServiceData[] = [
       { q: 'Do you guarantee the deposit back?', a: 'Yes. If your letting agent or landlord raises a cleaning issue we covered, we return and re-clean the relevant areas at no extra charge. Most clients get their full deposit returned after our clean.' },
       { q: 'How long does an end of tenancy clean take?', a: 'A 1-bed flat typically takes 3–4 hours. A 3-bed house takes 5–7 hours. We work until the property meets inspection standard, not until a timer runs out.' },
       { q: 'Do I need to be present during the clean?', a: 'No. Most clients arrange key collection via a lockbox or leave keys with us. We\'re fully insured and DBS-checked — your property is safe in our hands.' },
-      { q: 'How much notice do you need for an end of tenancy clean?', a: 'We ask for at least 48 hours where possible, but we regularly take last-minute bookings. Call 07769 240 184 to check availability for your move-out date.' },
+      { q: 'How much notice do you need for an end of tenancy clean?', a: 'We ask for at least 48 hours where possible, but we regularly take last-minute bookings. Call 07767 759 013 to check availability for your move-out date.' },
     ],
     cta: 'Book Your End of Tenancy Clean',
     schema: 'HouseCleaner',
@@ -76,7 +76,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Deep Cleaning',
     shortName: 'Deep Clean',
     tagline: 'Top to bottom. Every detail, every corner.',
-    metaDescription: 'Professional deep cleaning in {location} from £75. One-off intensive clean covering every room, appliance, and surface. DBS-checked, fully insured. Call 07769 240 184.',
+    metaDescription: 'Professional deep cleaning in {location} from £75. One-off intensive clean covering every room, appliance, and surface. DBS-checked, fully insured. Call 07767 759 013.',
     h1Template: 'Deep Cleaning Service in {location}',
     intro: 'Our deep cleaning service in {location} goes far beyond a standard clean. Every surface, appliance, and hidden corner is tackled by our trained team — ideal for a seasonal refresh, before moving in, after building work, or simply when your home needs a proper reset. We cover the full {postcode} area and can usually book within 3–5 days.',
     included: [
@@ -100,7 +100,7 @@ export const SERVICES: ServiceData[] = [
       { q: 'What is the difference between a regular clean and a deep clean?', a: 'A regular clean maintains your home week to week. A deep clean starts from scratch — inside appliances, behind furniture, inside cupboards, grout lines, limescale — areas a standard clean doesn\'t reach.' },
       { q: 'How often should I get a deep clean?', a: 'Most households book a deep clean every 3–6 months to complement regular maintenance cleaning. It\'s also common before hosting events, after illness, or after building work.' },
       { q: 'Do I need to prepare anything before the deep clean?', a: 'Just clear any personal items you\'d prefer we don\'t move, and ensure hot water and power are available. We bring all our own professional cleaning supplies.' },
-      { q: 'Can I get a same-week deep clean?', a: 'In most cases yes. We aim to accommodate bookings within 3–5 days. Call 07769 240 184 or WhatsApp us for the quickest availability.' },
+      { q: 'Can I get a same-week deep clean?', a: 'In most cases yes. We aim to accommodate bookings within 3–5 days. Call 07767 759 013 or WhatsApp us for the quickest availability.' },
     ],
     cta: 'Book Your Deep Clean',
     schema: 'HouseCleaner',
@@ -110,7 +110,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Regular Home Cleaning',
     shortName: 'Regular Clean',
     tagline: 'Your cleaner, every week. Same person, same standard.',
-    metaDescription: 'Regular house cleaning in {location} from £35. Weekly, fortnightly, or monthly. Same DBS-checked cleaner every visit. No contracts. Call 07769 240 184.',
+    metaDescription: 'Regular house cleaning in {location} from £35. Weekly, fortnightly, or monthly. Same DBS-checked cleaner every visit. No contracts. Call 07767 759 013.',
     h1Template: 'Regular House Cleaning in {location}',
     intro: 'Life is busy enough. Our regular cleaning service gives {location} homes a consistent, professional clean without the hassle — weekly, fortnightly, or monthly, always from the same trusted cleaner. No contracts, no lock-in, and always the same face at your door. We serve {postcode} and the surrounding area.',
     included: [
@@ -143,7 +143,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Move In / Move Out Cleaning',
     shortName: 'Move In / Move Out',
     tagline: 'Fresh start in your new home. Perfect finish when you leave.',
-    metaDescription: 'Move in and move out cleaning in {location} from £110. Clean your new home before you unpack or leave your old one spotless. DBS-checked, fully insured. 07769 240 184.',
+    metaDescription: 'Move in and move out cleaning in {location} from £110. Clean your new home before you unpack or leave your old one spotless. DBS-checked, fully insured. 07767 759 013.',
     h1Template: 'Move In & Move Out Cleaning in {location}',
     intro: 'Moving home in {location}? Whether you\'re arriving at a new property and want it properly cleaned before you unpack, or you\'re leaving and need to hand it back in perfect condition, our move in/move out service covers you completely. We cover {postcode} and operate 7 days a week to fit around completion and moving dates.',
     included: [
@@ -177,7 +177,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Carpet & Upholstery Cleaning',
     shortName: 'Carpet Cleaning',
     tagline: 'Deep extraction. Fresh results. Per room or whole house.',
-    metaDescription: 'Professional carpet cleaning in {location} from £25/room. Hot water extraction removes deep stains, odours, and allergens. DBS-checked team. Call 07769 240 184.',
+    metaDescription: 'Professional carpet cleaning in {location} from £25/room. Hot water extraction removes deep stains, odours, and allergens. DBS-checked team. Call 07767 759 013.',
     h1Template: 'Carpet & Upholstery Cleaning in {location}',
     intro: 'Our carpet cleaning service uses professional hot water extraction to remove deep-set dirt, stains, pet odours, and allergens from carpets and upholstery across {location}. Unlike surface-only methods, hot water extraction cleans deep into the pile, leaving carpets genuinely fresh — not just damp. We cover {postcode} and the surrounding area, with results visible within hours of drying.',
     included: [
@@ -210,7 +210,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Office & Commercial Cleaning',
     shortName: 'Office Cleaning',
     tagline: 'Reliable contract cleaning built around your business hours.',
-    metaDescription: 'Office and commercial cleaning in {location} from £65/visit. Daily, weekly, or out-of-hours. DBS-checked staff, £5M insured. Contract or flexible. Call 07769 240 184.',
+    metaDescription: 'Office and commercial cleaning in {location} from £65/visit. Daily, weekly, or out-of-hours. DBS-checked staff, £5M insured. Contract or flexible. Call 07767 759 013.',
     h1Template: 'Office & Commercial Cleaning in {location}',
     intro: 'A clean workplace isn\'t just presentable — it improves staff wellbeing, reduces sick days, and makes the right impression on clients. thefamgroup provides reliable office and commercial cleaning for businesses across {location}, from small offices to larger commercial spaces. We work around your hours — early mornings, evenings, weekends — and provide fully vetted, insured operatives every visit. We cover {postcode} and the surrounding commercial areas.',
     included: [
@@ -243,7 +243,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Post-Construction & Builders Clean',
     shortName: 'Builders Clean',
     tagline: 'Remove the dust. Reveal the finish.',
-    metaDescription: 'Post-construction and builders clean in {location} from £180. Remove plaster dust, paint marks, and debris after building work. DBS-checked, fully insured. Call 07769 240 184.',
+    metaDescription: 'Post-construction and builders clean in {location} from £180. Remove plaster dust, paint marks, and debris after building work. DBS-checked, fully insured. Call 07767 759 013.',
     h1Template: 'Post-Construction Cleaning in {location}',
     intro: 'After building work, renovation, or refurbishment, your property needs a clean that goes beyond standard domestic cleaning. Our post-construction cleaning team in {location} removes plaster dust, paint splatter, adhesive residue, grout film, and building debris — leaving your property ready to move into or hand over. We cover {postcode} and work around your contractor\'s schedule.',
     included: [
@@ -277,7 +277,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Airbnb & Holiday Let Cleaning',
     shortName: 'Airbnb Clean',
     tagline: '5-star standards. Fast turnaround. Every single time.',
-    metaDescription: 'Airbnb and holiday let cleaning in {location} from £75. Fast turnaround between guests, linen change, restock, and inspection-standard finish. Call 07769 240 184.',
+    metaDescription: 'Airbnb and holiday let cleaning in {location} from £75. Fast turnaround between guests, linen change, restock, and inspection-standard finish. Call 07767 759 013.',
     h1Template: 'Airbnb & Holiday Let Cleaning in {location}',
     intro: 'Maintaining 5-star guest reviews depends on a consistently immaculate property between every booking. Our Airbnb and holiday let cleaning service in {location} is built around fast turnarounds, reliable scheduling, and an inspection-standard finish every time — regardless of what the previous guests left behind. We cover {postcode} with flexible same-day availability between checkouts and check-ins.',
     included: [
@@ -1188,10 +1188,10 @@ export function interpolate(template: string, location: LocationData): string {
 
 // Contact details — single source of truth
 export const CONTACT = {
-  phone: '07769 240 184',
-  phoneTel: 'tel:07769240184',
-  whatsapp: 'https://wa.me/447769240184',
-  email: 'thefamgrouphq@gmail.com',
+  phone: '07767 759 013',
+  phoneTel: 'tel:07767759013',
+  whatsapp: 'https://wa.me/447767759013',
+  email: 'info@thefamgroup.uk',
   website: 'thefamgroup.uk',
   siteUrl: 'https://www.thefamgroup.uk',
   businessName: 'thefamgroup',

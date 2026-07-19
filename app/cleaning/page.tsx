@@ -5,7 +5,7 @@ import { SERVICES, LOCATIONS, CONTACT } from '@/lib/seo-data'
 
 export const metadata: Metadata = {
   title: 'Cleaning Services — Manchester & Crewe',
-  description: 'Professional cleaning services across Manchester and Crewe. End of tenancy, deep clean, carpet cleaning, commercial cleaning and more. DBS-checked, fully insured. Call 07769 240 184.',
+  description: 'Professional cleaning services across Manchester and Crewe. End of tenancy, deep clean, carpet cleaning, commercial cleaning and more. DBS-checked, fully insured. Call 07767 759 013.',
   alternates: { canonical: `${CONTACT.siteUrl}/cleaning/` },
 }
 
