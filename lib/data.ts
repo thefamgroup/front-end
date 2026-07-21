@@ -9,7 +9,7 @@ export const CONTACT = {
   whatsapp: 'https://wa.me/447767759013?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services',
   email: 'info@thefamgroup.uk',
   website: 'thefamgroup.uk',
-  locations: ['Manchester', 'Crewe'],
+  locations: ['Manchester', 'Liverpool', 'Crewe', 'Cheshire', 'Stoke-on-Trent', 'Carlisle'],
   tagline: 'Family. Community. Care.',
 }
 

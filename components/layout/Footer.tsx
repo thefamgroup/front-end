@@ -126,6 +126,7 @@ export function Footer() {
               {[
                 ['About Us',      '/about'],
                 ['Pricing',       '/prices'],
+                ['Service Areas', '/service-areas'],
                 ['Blog',          '/blog'],
                 ['Careers',       '/careers'],
                 ['Free Estimate', '/quote'],

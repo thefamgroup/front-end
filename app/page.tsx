@@ -128,7 +128,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full pl-1.5 pr-4 py-1.5 mb-6">
                 <span className="w-5 h-5 rounded-full bg-brand-500 flex-shrink-0" aria-hidden="true" />
-                <span className="text-xs font-semibold text-gray-500">Trusted across Manchester &amp; Crewe</span>
+                <span className="text-xs font-semibold text-gray-500">Serving Manchester, Liverpool, Cheshire &amp; beyond</span>
               </div>
               <h1 className="font-display text-[clamp(38px,5vw,64px)] font-extrabold leading-[1.08] tracking-tight text-gray-900 mb-5">
                 Trusted Cleaners,{' '}
@@ -170,6 +170,27 @@ export default function HomePage() {
           <TrustBadge Icon={Shield}     text="£5M public liability insurance" />
           <TrustBadge Icon={FileText}   text="No lock-in contracts" />
           <TrustBadge Icon={Star}       text="Satisfaction guaranteed or we return free" />
+        </div>
+      </div>
+
+      {/* ── LOCATIONS STRIP ──────────────────────────────────── */}
+      <div className="border-b border-gray-100 bg-white py-3 overflow-hidden">
+        <div className="container-wide">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
+            <span className="text-xs font-bold uppercase tracking-widest text-gray-400 flex-shrink-0">Areas we cover</span>
+            {[
+              'Manchester', 'Salford', 'Trafford', 'Stretford', 'Stockport',
+              'Liverpool', 'Warrington', 'Birkenhead', 'St Helens', 'Widnes',
+              'Chester', 'Crewe', 'Nantwich', 'Knutsford', 'Wilmslow',
+              'Stoke-on-Trent', 'Newcastle-under-Lyme', 'Stafford',
+              'Carlisle', 'Penrith',
+            ].map((loc) => (
+              <Link key={loc} href="/service-areas" className="text-xs text-gray-500 hover:text-brand-600 transition-colors flex items-center gap-1">
+                <MapPin size={10} className="text-brand-400" aria-hidden="true" />
+                {loc}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
