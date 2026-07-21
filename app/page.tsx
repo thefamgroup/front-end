@@ -9,6 +9,7 @@ import type { LucideIcon } from 'lucide-react'
 import { EstimateWidget } from '@/components/sections/EstimateWidget'
 import { BookingForm } from '@/components/sections/BookingForm'
 import { TESTIMONIALS, ADDON_CARDS, CONTACT } from '@/lib/data'
+import { LOCATIONS_EXPANDED } from '@/lib/locations-expanded'
 
 // ── Icon helpers ─────────────────────────────────────────────────────
 
@@ -178,16 +179,10 @@ export default function HomePage() {
         <div className="container-wide">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
             <span className="text-xs font-bold uppercase tracking-widest text-gray-400 flex-shrink-0">Areas we cover</span>
-            {[
-              'Manchester', 'Salford', 'Trafford', 'Stretford', 'Stockport',
-              'Liverpool', 'Warrington', 'Birkenhead', 'St Helens', 'Widnes',
-              'Chester', 'Crewe', 'Nantwich', 'Knutsford', 'Wilmslow',
-              'Stoke-on-Trent', 'Newcastle-under-Lyme', 'Stafford',
-              'Carlisle', 'Penrith',
-            ].map((loc) => (
-              <Link key={loc} href="/service-areas" className="text-xs text-gray-500 hover:text-brand-600 transition-colors flex items-center gap-1">
+            {LOCATIONS_EXPANDED.filter(l => l.tier === 1).map((loc) => (
+              <Link key={loc.slug} href={`/cleaning/end-of-tenancy-cleaning/${loc.slug}/`} className="text-xs text-gray-500 hover:text-brand-600 transition-colors flex items-center gap-1">
                 <MapPin size={10} className="text-brand-400" aria-hidden="true" />
-                {loc}
+                {loc.name}
               </Link>
             ))}
           </div>
