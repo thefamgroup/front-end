@@ -1,8 +1,8 @@
 // lib/locations-expanded.ts
-// EXPANDED LOCATION DATABASE — 4 Regions, 200+ hyper-local areas
-// Greater Manchester (10 boroughs) | Crewe & Cheshire East | Stoke-on-Trent | Liverpool & Merseyside
+// EXPANDED LOCATION DATABASE — 5 Regions, 200+ hyper-local areas
+// Greater Manchester (10 boroughs) | Crewe & Cheshire East | Stoke-on-Trent | Liverpool & Merseyside | Carlisle & Cumbria
 
-export type Region = 'manchester' | 'crewe' | 'stoke' | 'liverpool'
+export type Region = 'manchester' | 'crewe' | 'stoke' | 'liverpool' | 'carlisle'
 
 export interface LocationData {
   slug: string
@@ -226,6 +226,21 @@ export const LOCATIONS_EXPANDED: LocationData[] = [
   { slug:'bebington', name:'Bebington', postcode:'CH63', region:'liverpool', borough:'Wirral', tier:2, localContext:'South Wirral suburb close to the Lever Brothers\' Port Sunlight heritage village — desirable residential area with premium rental market.', propertyTypes:'Edwardian semis, detached family homes, premium rentals', nearbyAreas:['Birkenhead','Bromborough','Heswall'], lat:53.3575, lng:-3.0067 },
   { slug:'heswall', name:'Heswall', postcode:'CH60', region:'liverpool', borough:'Wirral', tier:2, localContext:'One of Wirral\'s most desirable addresses with views across the Dee Estuary — affluent residential market with premium cleaning demand.', propertyTypes:'Large detached homes, premium properties, executive rentals', nearbyAreas:['West Kirby','Bebington','Neston'], lat:53.3289, lng:-3.1003 },
   { slug:'west-kirby', name:'West Kirby', postcode:'CH48', region:'liverpool', borough:'Wirral', tier:2, localContext:'A premium coastal town on the Dee Estuary — popular with professionals and retired affluent residents, with a strong cleaning market.', propertyTypes:'Coastal properties, premium detached homes, executive rentals', nearbyAreas:['Hoylake','Heswall','Meols'], lat:53.3727, lng:-3.1810 },
+
+  // ═══════════════════════════════════════════════════════
+  // CARLISLE & CUMBRIA
+  // ═══════════════════════════════════════════════════════
+
+  { slug:'carlisle-city-centre', name:'Carlisle City Centre', postcode:'CA1', region:'carlisle', borough:'Carlisle', tier:1, localContext:'The historic capital of Cumbria, Carlisle city centre has a growing apartment rental market driven by University of Cumbria students, Cumberland Infirmary NHS staff, and young professionals — consistent EOT and deep cleaning demand year-round.', propertyTypes:'City centre apartments, converted Victorian townhouses, student accommodation, professional lets', nearbyAreas:['Stanwix','Botcherby','Harraby','Caldewgate'], lat:54.8951, lng:-2.9382 },
+  { slug:'stanwix', name:'Stanwix', postcode:'CA3', region:'carlisle', borough:'Carlisle', tier:2, localContext:'Carlisle\'s most desirable residential suburb on the north bank of the Eden — Victorian and Edwardian houses popular with professional and family tenants expecting high cleaning standards at checkout.', propertyTypes:'Victorian semis, Edwardian detached homes, professional and family private rentals', nearbyAreas:['Carlisle City Centre','Etterby','Kingstown'], lat:54.9021, lng:-2.9429 },
+  { slug:'botcherby', name:'Botcherby', postcode:'CA1', region:'carlisle', borough:'Carlisle', tier:2, localContext:'East Carlisle residential neighbourhood with a stable private rental market of interwar and postwar semis — consistent EOT cleaning demand throughout the year.', propertyTypes:'Interwar semis, postwar estate housing, private family lets', nearbyAreas:['Carlisle City Centre','Harraby','Upperby'], lat:54.8856, lng:-2.9175 },
+  { slug:'scotby', name:'Scotby', postcode:'CA4', region:'carlisle', borough:'Carlisle', tier:2, localContext:'A picturesque village just east of Carlisle popular with professional families commuting to the city — executive and high-quality private rentals requiring premium cleaning standards.', propertyTypes:'Detached village properties, executive homes, premium family rentals', nearbyAreas:['Carlisle City Centre','Brampton','Wetheral'], lat:54.8867, lng:-2.8932 },
+  { slug:'dalston', name:'Dalston', postcode:'CA5', region:'carlisle', borough:'Carlisle', tier:2, localContext:'A traditional Cumbrian village south-west of Carlisle popular with rural property buyers and renters — consistent demand for professional deep cleaning between tenancies.', propertyTypes:'Detached rural properties, village semis, character family rentals', nearbyAreas:['Carlisle City Centre','Wigton','Thursby'], lat:54.8531, lng:-2.9847 },
+  { slug:'wigton', name:'Wigton', postcode:'CA7', region:'carlisle', borough:'Carlisle', tier:1, localContext:'A historic market town 12 miles south-west of Carlisle — the main service centre for west Cumbria with a stable residential rental market and growing demand for professional cleaning services.', propertyTypes:'Victorian terraces, market town semis, family rentals', nearbyAreas:['Carlisle City Centre','Dalston','Aspatria'], lat:54.8272, lng:-3.1598 },
+  { slug:'brampton', name:'Brampton', postcode:'CA8', region:'carlisle', borough:'Carlisle', tier:2, localContext:'A charming market town 9 miles east of Carlisle on the edge of Hadrian\'s Wall country — holiday lets and permanent rentals create consistent cleaning demand, particularly around peak tourist seasons.', propertyTypes:'Stone cottages, holiday lets, market town semis, rural rentals', nearbyAreas:['Carlisle City Centre','Scotby','Haltwhistle'], lat:54.9292, lng:-2.7262 },
+  { slug:'longtown', name:'Longtown', postcode:'CA6', region:'carlisle', borough:'Carlisle', tier:2, localContext:'A border town 9 miles north of Carlisle known for its livestock market — modest residential area with local professional and family rental demand close to the Scottish border.', propertyTypes:'Victorian terraces, family semis, private lets, border-town properties', nearbyAreas:['Carlisle City Centre','Gretna','Canonbie'], lat:54.9742, lng:-2.9694 },
+  { slug:'penrith', name:'Penrith', postcode:'CA11', region:'carlisle', borough:'Eden', tier:1, localContext:'The gateway to the Lake District and Eden Valley — Penrith has a buoyant rental market driven by tourism, the M6 corridor, and its growing professional base close to the Lakes.', propertyTypes:'Stone townhouses, family semis, rural cottages, holiday lets', nearbyAreas:['Carlisle City Centre','Appleby-in-Westmorland','Keswick'], lat:54.6640, lng:-2.7567 },
+  { slug:'appleby-in-westmorland', name:'Appleby-in-Westmorland', postcode:'CA16', region:'carlisle', borough:'Eden', tier:3, localContext:'A historic Eden Valley market town famous for the annual Horse Fair — holiday lets and permanent residences in traditional stone properties create specialist cleaning demand throughout the year.', propertyTypes:'Stone cottages, holiday lets, traditional townhouses, rural Eden Valley properties', nearbyAreas:['Penrith','Kirkby Stephen','Carlisle City Centre'], lat:54.5786, lng:-2.4940 },
 ]
 
 // ─────────────────────────────────────────────────────────────────
@@ -260,6 +275,13 @@ export const REGIONS = {
     description: 'From Liverpool City Centre to Southport, Birkenhead to Huyton — comprehensive coverage across all five Merseyside boroughs.',
     boroughs: ['Liverpool','Knowsley','Sefton','St Helens','Wirral'],
     postcodes: ['L1','L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12','L13','L14','L15','L16','L17','L18','L19','L20','L21','L22','L23','L24','L25','L26','L27','L31','L32','L33','L34','L36','L37','WA10','WA11','WA12','CH41','CH44','CH48','CH60','CH63','PR8'],
+  },
+  carlisle: {
+    name: 'Carlisle & Cumbria',
+    tagline: 'Capital of Cumbria & the Eden Valley',
+    description: 'From Carlisle City Centre to Penrith, Wigton to Brampton — professional cleaning across Carlisle, Eden, and the surrounding Cumbrian countryside.',
+    boroughs: ['Carlisle','Eden'],
+    postcodes: ['CA1','CA2','CA3','CA4','CA5','CA6','CA7','CA8','CA11','CA16'],
   },
 }
 

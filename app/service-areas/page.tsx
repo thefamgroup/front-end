@@ -18,6 +18,7 @@ const REGION_STYLE: Record<Region, { colour: string; badge: string }> = {
   crewe:      { colour: 'bg-emerald-50 border-emerald-200', badge: 'bg-emerald-600' },
   stoke:      { colour: 'bg-amber-50 border-amber-200',     badge: 'bg-amber-500' },
   liverpool:  { colour: 'bg-blue-50 border-blue-200',       badge: 'bg-blue-500' },
+  carlisle:   { colour: 'bg-purple-50 border-purple-200',   badge: 'bg-purple-600' },
 }
 
 const SERVICES = [
