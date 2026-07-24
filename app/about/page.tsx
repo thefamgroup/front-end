@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
+import type React from 'react'
 import Link from 'next/link'
 import { Star, Phone } from 'lucide-react'
 import { TESTIMONIALS, CONTACT } from '@/lib/data'
+import {
+  IllustrationShield, IllustrationHandshake, IllustrationStar,
+  IllustrationPound, IllustrationLeaf, IllustrationChat,
+  IllustrationAboutHero,
+} from '@/components/icons/ServiceIllustrations'
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -31,8 +37,10 @@ export default function AboutPage() {
                 <a href={CONTACT.phoneTel} className="btn-outline"><Phone size={15} /> {CONTACT.phone}</a>
               </div>
             </div>
-            <div className="bg-brand-50 rounded-3xl min-h-[380px] flex items-center justify-center text-[80px]">
-              🤝
+            <div className="bg-gradient-to-br from-brand-600 to-brand-500 rounded-3xl min-h-[380px] flex items-center justify-center relative overflow-hidden">
+              <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5" aria-hidden="true" />
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-black/8" aria-hidden="true" />
+              <IllustrationAboutHero className="w-72 h-72 relative z-10" />
             </div>
           </div>
 
@@ -58,16 +66,16 @@ export default function AboutPage() {
           <span className="section-tag">Our Values</span>
           <h2 className="font-display text-3xl font-bold text-gray-900 mb-10">What Makes Us Different</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              { icon: '🛡', title: 'Safety First', desc: 'Fully insured with £5M public liability. DBS-checked team. Your home and office are always safe with us.' },
-              { icon: '🤝', title: 'Trusted Cleaners', desc: 'Every FAM team member is vetted, reference-checked, and trained before they work on any client property.' },
-              { icon: '⭐', title: 'Satisfaction Guarantee', desc: 'Not happy? Contact us within 24 hours and we\'ll return and put it right — completely free of charge.' },
-              { icon: '💷', title: 'Fair Prices', desc: 'We tailor every service to your needs and budget. You\'ll never pay for more than you need. Transparent always.' },
-              { icon: '🌿', title: 'Eco-Friendly Options', desc: 'We offer 100% biodegradable, non-toxic product upgrades. Safe for your family, pets, and the environment.' },
-              { icon: '💬', title: 'Responsive Care', desc: 'Reach us by WhatsApp, phone, or email. We respond within 2 hours during business hours, Mon–Saturday.' },
-            ].map((v) => (
+            {([
+              { Illus: IllustrationShield,     title: 'Safety First',            desc: 'Fully insured with £5M public liability. DBS-checked team. Your home and office are always safe with us.' },
+              { Illus: IllustrationHandshake,  title: 'Trusted Cleaners',        desc: 'Every FAM team member is vetted, reference-checked, and trained before they work on any client property.' },
+              { Illus: IllustrationStar,       title: 'Satisfaction Guarantee',  desc: "Not happy? Contact us within 24 hours and we'll return and put it right — completely free of charge." },
+              { Illus: IllustrationPound,      title: 'Fair Prices',             desc: "We tailor every service to your needs and budget. You'll never pay for more than you need. Transparent always." },
+              { Illus: IllustrationLeaf,       title: 'Eco-Friendly Options',    desc: 'We offer 100% biodegradable, non-toxic product upgrades. Safe for your family, pets, and the environment.' },
+              { Illus: IllustrationChat,       title: 'Responsive Care',         desc: 'Reach us by WhatsApp, phone, or email. We respond within 2 hours during business hours, Mon–Saturday.' },
+            ] as { Illus: React.FC<{ className?: string }>; title: string; desc: string }[]).map((v) => (
               <div key={v.title} className="bg-[#f5f5f0] rounded-2xl p-6 border border-gray-100">
-                <div className="text-3xl mb-4">{v.icon}</div>
+                <v.Illus className="w-12 h-12 mb-4" />
                 <h3 className="font-display font-bold text-base text-gray-900 mb-2">{v.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{v.desc}</p>
               </div>

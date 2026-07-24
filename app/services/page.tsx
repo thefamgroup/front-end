@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RESIDENTIAL_SERVICES, COMMERCIAL_SERVICES, CONTACT } from '@/lib/data'
 import { Phone } from 'lucide-react'
+import { SERVICE_ILLUSTRATIONS } from '@/components/icons/ServiceIllustrations'
 
 export const metadata: Metadata = {
   title: 'Our Services',
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
 }
 
 function ServiceCard({ service }: { service: typeof RESIDENTIAL_SERVICES[0] }) {
+  const Illustration = SERVICE_ILLUSTRATIONS[service.id]
   return (
     <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-card hover:shadow-card-hover transition-all group">
-      <div className="h-40 bg-brand-50 flex items-center justify-center text-6xl group-hover:bg-brand-100 transition-colors">
-        {service.emoji}
+      <div className="h-40 bg-brand-50 flex items-center justify-center group-hover:bg-brand-100 transition-colors">
+        {Illustration
+          ? <Illustration className="w-28 h-28" />
+          : <span className="text-6xl">{service.emoji}</span>
+        }
       </div>
       <div className="p-5">
         <h3 className="font-display font-bold text-base text-gray-900 mb-2">{service.title}</h3>

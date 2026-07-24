@@ -498,7 +498,7 @@ export default function HomePage() {
                   { Icon: Phone,         title: 'Phone',          value: CONTACT.phone,  href: CONTACT.phoneTel },
                   { Icon: MessageCircle, title: 'WhatsApp',       value: 'Message us directly', href: CONTACT.whatsapp },
                   { Icon: Mail,          title: 'Email Us',       value: CONTACT.email,  href: `mailto:${CONTACT.email}` },
-                  { Icon: MapPin,        title: 'Areas We Cover', value: 'Manchester, Crewe & surrounding areas', href: undefined },
+                  { Icon: MapPin,        title: 'Areas We Cover', value: 'Manchester, Liverpool, Cheshire & Stoke-on-Trent', href: '/service-areas' },
                 ] as { Icon: LucideIcon; title: string; value: string; href: string | undefined }[]).map((item) => (
                   <div key={item.title} className="flex items-center gap-4 p-4 bg-[#f5f5f0] rounded-2xl">
                     <div className="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
@@ -525,10 +525,12 @@ export default function HomePage() {
         <div className="container-wide">
           <span className="section-tag">Our Locations</span>
           <h2 className="font-display text-[clamp(28px,3.5vw,44px)] font-bold mb-10">Areas We Serve</h2>
-          <div className="grid sm:grid-cols-2 gap-5 max-w-2xl">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-3xl">
             {[
-              { city: 'Manchester', desc: 'Covering central Manchester, Salford, Trafford, Didsbury, Chorlton and surrounding areas.' },
-              { city: 'Crewe',      desc: 'Covering Crewe, Nantwich, Sandbach, Middlewich and surrounding Cheshire areas.' },
+              { city: 'Greater Manchester', desc: 'Covering all 10 boroughs — City Centre, Salford, Trafford, Didsbury, Chorlton, Stockport, Bolton, Wigan, Oldham and beyond.' },
+              { city: 'Crewe & Cheshire East', desc: 'Covering Crewe, Nantwich, Sandbach, Middlewich, Congleton, Macclesfield and surrounding Cheshire East areas.' },
+              { city: 'Liverpool & Merseyside', desc: 'Covering Liverpool City Centre, Anfield, Wavertree, Allerton, Childwall, Bootle, Wallasey and Merseyside.' },
+              { city: 'Stoke-on-Trent & Staffordshire', desc: 'Covering all six towns — Hanley, Burslem, Longton, Fenton, Tunstall, Stoke — plus Newcastle-under-Lyme.' },
             ].map((loc) => (
               <div key={loc.city} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-card hover:border-brand-300 hover:shadow-card-hover transition-all">
                 <span className="inline-block bg-brand-500 text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">Active</span>
@@ -539,8 +541,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-sm text-gray-400 mt-6">
-            Not in these areas?{' '}
-            <Link href="/contact" className="text-brand-500 font-semibold hover:underline">Contact us — we&apos;re expanding.</Link>
+            Not sure if we cover your area?{' '}
+            <Link href="/service-areas" className="text-brand-500 font-semibold hover:underline">See our full service areas →</Link>
           </p>
         </div>
       </section>
