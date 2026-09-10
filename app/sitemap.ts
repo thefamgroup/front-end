@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { SERVICES, LOCATIONS } from '@/lib/seo-data'
 import { CARPET_LOCATIONS } from '@/lib/carpet-locations'
 import { OFFICE_LOCATIONS } from '@/lib/office-locations'
+import { BIN_LOCATIONS } from '@/lib/bin-locations'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.thefamgroup.uk'
@@ -61,5 +62,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
-  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages]
+  // Engine 4: bin cleaning hub + location pages
+  const binPages: MetadataRoute.Sitemap = [
+    { url: `${base}/cleaning/bin-cleaning/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
+    ...BIN_LOCATIONS.map(l => ({
+      url: `${base}/cleaning/bin-cleaning/${l.slug}/`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: l.tier === 1 ? 0.8 : 0.7,
+    })),
+  ]
+
+  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages, ...binPages]
 }

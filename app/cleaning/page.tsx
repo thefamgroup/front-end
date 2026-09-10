@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { SERVICES, LOCATIONS, CONTACT } from '@/lib/seo-data'
+import { TOTAL_BIN_LOCATIONS } from '@/lib/bin-locations'
 
 export const metadata: Metadata = {
   title: 'Cleaning Services — Manchester & Crewe',
@@ -44,6 +45,20 @@ export default function CleaningHubPage() {
                 </span>
               </Link>
             ))}
+            <Link
+              href="/cleaning/bin-cleaning/"
+              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-card hover:border-brand-300 hover:shadow-md transition-all"
+            >
+              <h2 className="font-display font-bold text-gray-900 mb-2 group-hover:text-brand-500 transition-colors">
+                Wheelie Bin Cleaning
+              </h2>
+              <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                4-weekly subscription from £6.99/bin. Hot water pressure wash, no contract, {TOTAL_BIN_LOCATIONS} locations.
+              </p>
+              <span className="inline-flex items-center gap-1 text-brand-500 text-sm font-semibold">
+                View areas <ArrowRight size={14} />
+              </span>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
