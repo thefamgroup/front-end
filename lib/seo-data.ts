@@ -269,7 +269,7 @@ export function interpolate(template: string, location: LocationData): string {
 export const CONTACT = {
   phone: '07351 282 131',
   phoneTel: 'tel:07351282131',
-  whatsapp: 'https://wa.me/447351282131',
+  whatsapp: 'https://wa.me/447767759013',
   email: 'info@thefamgroup.uk',
   website: 'thefamgroup.uk',
   siteUrl: 'https://www.thefamgroup.uk',

@@ -221,9 +221,15 @@ describe('data field integrity', () => {
     }
   })
 
-  it('CONTACT has a consistent phone number across phone/phoneTel/whatsapp', () => {
+  it('CONTACT.phone and CONTACT.phoneTel always match the same number', () => {
     const digitsFromPhone = CONTACT.phone.replace(/\D/g, '')
     expect(CONTACT.phoneTel).toContain(digitsFromPhone)
-    expect(CONTACT.whatsapp).toContain(digitsFromPhone.replace(/^0/, '44'))
+  })
+
+  it('CONTACT.whatsapp is deliberately pinned to 447767759013, independent of the voice number', () => {
+    // The voice/display number (CONTACT.phone) and the WhatsApp number are intentionally
+    // allowed to differ — confirmed by the user, who kept WhatsApp on the older number
+    // while the phone number changed. This pins that choice so it isn't "fixed" by accident.
+    expect(CONTACT.whatsapp).toContain('447767759013')
   })
 })
