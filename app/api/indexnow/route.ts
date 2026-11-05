@@ -7,6 +7,7 @@ import { getAllPageParams, SERVICES, CONTACT } from '@/lib/seo-data'
 import { CARPET_LOCATIONS } from '@/lib/carpet-locations'
 import { OFFICE_LOCATIONS } from '@/lib/office-locations'
 import { BIN_LOCATIONS } from '@/lib/bin-locations'
+import { BLOG_POSTS } from '@/lib/data'
 
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || ''
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow'
@@ -38,6 +39,9 @@ function buildAllUrls(): string[] {
     // Engine 4: bin cleaning
     `${BASE}/cleaning/bin-cleaning/`,
     ...BIN_LOCATIONS.map(l => `${BASE}/cleaning/bin-cleaning/${l.slug}/`),
+    // Blog
+    `${BASE}/blog/`,
+    ...BLOG_POSTS.map(p => `${BASE}/blog/${p.slug}/`),
   ]
 }
 
