@@ -18,7 +18,7 @@ const hubSchema = {
       '@id': 'https://www.thefamgroup.uk/#business',
       name: 'thefamgroup',
       url: 'https://www.thefamgroup.uk',
-      telephone: '+447767759013',
+      telephone: '+447351282131',
       email: 'info@thefamgroup.uk',
       description: 'Professional office and commercial cleaning across Greater Manchester, Crewe & Cheshire East, Liverpool & Merseyside, and Stoke-on-Trent. DBS-checked, £5M insured, no minimum contract.',
       areaServed: Object.values(OFFICE_REGIONS).map(r => ({ '@type': 'State', name: r.name })),

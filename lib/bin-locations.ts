@@ -1584,7 +1584,7 @@ export function buildBinFAQ(loc: BinLocation) {
     },
     {
       q: `Which bins do you clean in ${loc.name}?`,
-      a: `We clean all standard ${loc.councilName} wheelie bins — general waste (black or grey), recycling bins (brown and blue), and garden waste bins. We also clean commercial bins for businesses, restaurants, and managed properties in ${loc.name}. If your bin is unusual or oversized, call 07767 759 013 and we'll confirm we can accommodate it.`
+      a: `We clean all standard ${loc.councilName} wheelie bins — general waste (black or grey), recycling bins (brown and blue), and garden waste bins. We also clean commercial bins for businesses, restaurants, and managed properties in ${loc.name}. If your bin is unusual or oversized, call 07351 282 131 and we'll confirm we can accommodate it.`
     },
     {
       q: `Is your bin cleaning service in ${loc.name} environmentally safe?`,
@@ -1596,11 +1596,11 @@ export function buildBinFAQ(loc: BinLocation) {
     },
     {
       q: `How do I cancel my bin cleaning subscription?`,
-      a: `There is no minimum contract and no tie-in period. You can cancel at any time with no penalty by calling 07767 759 013 or emailing info@thefamgroup.uk. We're confident our service quality will keep you — but we never lock customers in.`
+      a: `There is no minimum contract and no tie-in period. You can cancel at any time with no penalty by calling 07351 282 131 or emailing info@thefamgroup.uk. We're confident our service quality will keep you — but we never lock customers in.`
     },
     {
       q: `What areas near ${loc.name} do you cover for bin cleaning?`,
-      a: `In addition to ${loc.name} (${loc.postcode}), we cover ${loc.nearbyAreas.slice(0,3).map(a => a.replace('-bin','')).join(', ')} and the wider ${loc.borough} area. Call 07767 759 013 to confirm coverage for your specific postcode.`
+      a: `In addition to ${loc.name} (${loc.postcode}), we cover ${loc.nearbyAreas.slice(0,3).map(a => a.replace('-bin','')).join(', ')} and the wider ${loc.borough} area. Call 07351 282 131 to confirm coverage for your specific postcode.`
     },
     {
       q: `Can you also clean my house alongside my bins in ${loc.name}?`,

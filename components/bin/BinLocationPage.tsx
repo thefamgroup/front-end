@@ -13,7 +13,7 @@ export function BinLocationPage({ location }: Props) {
   const waMessage = encodeURIComponent(
     `Hi thefamgroup! I'd like wheelie bin cleaning in ${location.name} (${location.postcode}). Can you give me a quote?`
   )
-  const waUrl = `https://wa.me/447767759013?text=${waMessage}`
+  const waUrl = `https://wa.me/447351282131?text=${waMessage}`
 
   const schema = {
     "@context": "https://schema.org",
@@ -23,7 +23,7 @@ export function BinLocationPage({ location }: Props) {
         "@id": "https://www.thefamgroup.uk/#business",
         "name": "thefamgroup",
         "url": "https://www.thefamgroup.uk",
-        "telephone": "+447767759013",
+        "telephone": "+447351282131",
         "email": "info@thefamgroup.uk",
         "priceRange": "£",
         "address": {
@@ -127,9 +127,9 @@ export function BinLocationPage({ location }: Props) {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href="tel:+447767759013"
+                <a href="tel:+447351282131"
                   className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-6 py-3.5 rounded-full hover:bg-brand-50 transition-colors">
-                  <Phone size={16} /> 07767 759 013
+                  <Phone size={16} /> 07351 282 131
                 </a>
                 <a href={waUrl} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-6 py-3.5 rounded-full hover:bg-green-600 transition-colors">
@@ -325,9 +325,9 @@ export function BinLocationPage({ location }: Props) {
             Text confirmation after every clean.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:+447767759013"
+            <a href="tel:+447351282131"
               className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-8 py-4 rounded-full hover:bg-brand-50 transition-colors">
-              <Phone size={18} /> 07767 759 013
+              <Phone size={18} /> 07351 282 131
             </a>
             <a href={waUrl} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-8 py-4 rounded-full hover:bg-green-600 transition-colors">

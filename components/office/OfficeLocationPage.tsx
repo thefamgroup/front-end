@@ -79,7 +79,7 @@ export default function OfficeLocationPage({ location }: Props) {
   const waMessage = encodeURIComponent(
     `Hi thefamgroup! I need office cleaning in ${location.name} (${location.postcode}). Can you give me a quote?`
   )
-  const waUrl = `https://wa.me/447767759013?text=${waMessage}`
+  const waUrl = `https://wa.me/447351282131?text=${waMessage}`
 
   const schema = {
     '@context': 'https://schema.org',
@@ -89,7 +89,7 @@ export default function OfficeLocationPage({ location }: Props) {
         '@id': 'https://www.thefamgroup.uk/#business',
         name: 'thefamgroup',
         url: 'https://www.thefamgroup.uk',
-        telephone: '+447767759013',
+        telephone: '+447351282131',
         email: 'info@thefamgroup.uk',
         priceRange: '££',
         address: {

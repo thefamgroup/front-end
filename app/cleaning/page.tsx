@@ -6,7 +6,7 @@ import { TOTAL_BIN_LOCATIONS } from '@/lib/bin-locations'
 
 export const metadata: Metadata = {
   title: 'Cleaning Services — Manchester & Crewe',
-  description: 'Professional cleaning services across Manchester and Crewe. End of tenancy, deep clean, carpet cleaning, commercial cleaning and more. DBS-checked, fully insured. Call 07767 759 013.',
+  description: 'Professional cleaning services across Manchester and Crewe. End of tenancy, deep clean, carpet cleaning, commercial cleaning and more. DBS-checked, fully insured. Call 07351 282 131.',
   alternates: { canonical: `${CONTACT.siteUrl}/cleaning/` },
 }
 

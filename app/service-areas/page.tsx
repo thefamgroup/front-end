@@ -40,7 +40,7 @@ const jsonLd = {
     '@type': 'LocalBusiness',
     name: 'thefamgroup',
     url: 'https://thefamgroup.uk',
-    telephone: '+447767759013',
+    telephone: '+447351282131',
   },
   areaServed: LOCATIONS_EXPANDED.map(l => ({ '@type': 'City', name: l.name })),
 }

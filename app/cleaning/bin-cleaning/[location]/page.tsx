@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!location) return {}
 
   const title = `Wheelie Bin Cleaning ${location.name} | thefamgroup — From £6.99/Bin, No Contract`
-  const description = `Professional wheelie bin cleaning in ${location.name} (${location.postcode}) from £6.99/bin/month. Hot water pressure wash, biodegradable sanitiser, timed to your ${location.councilName} collection day. No contract, cancel anytime. Call 07767 759 013.`
+  const description = `Professional wheelie bin cleaning in ${location.name} (${location.postcode}) from £6.99/bin/month. Hot water pressure wash, biodegradable sanitiser, timed to your ${location.councilName} collection day. No contract, cancel anytime. Call 07351 282 131.`
   const canonical = `${CONTACT.siteUrl}/cleaning/bin-cleaning/${location.slug}/`
 
   return {

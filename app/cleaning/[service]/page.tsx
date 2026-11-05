@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return { title: 'Not Found' }
   return {
     title: `${service.name} — Manchester & Crewe`,
-    description: `Professional ${service.name.toLowerCase()} across Manchester and Crewe. ${service.tagline} DBS-checked team. Call 07767 759 013.`,
+    description: `Professional ${service.name.toLowerCase()} across Manchester and Crewe. ${service.tagline} DBS-checked team. Call 07351 282 131.`,
     alternates: { canonical: `${CONTACT.siteUrl}/cleaning/${slug}/` },
   }
 }

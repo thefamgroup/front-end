@@ -19,7 +19,7 @@ test.describe('SEO engine — Bolton hub to service page journey', () => {
 
     // Landed on a real Engine 1 page with actual interpolated content, not a 404.
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Astley Bridge/i)
-    await expect(page.getByText(/07767 759 013|07767759013/).first()).toBeVisible()
+    await expect(page.getByText(/07351 282 131|07351282131/).first()).toBeVisible()
   })
 
   test('bin-cleaning hub links through to a real bin-cleaning location page', async ({ page }) => {

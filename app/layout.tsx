@@ -43,7 +43,7 @@ const jsonLd = {
   name: 'thefamgroup',
   description: 'Professional residential and commercial cleaning services across Manchester, Liverpool, Cheshire, Stoke-on-Trent, Carlisle and Crewe.',
   url: 'https://thefamgroup.uk',
-  telephone: '+447767759013',
+  telephone: '+447351282131',
   email: 'info@thefamgroup.uk',
   address: [
     { '@type': 'PostalAddress', addressLocality: 'Manchester',      addressCountry: 'GB' },
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Floating WhatsApp button */}
         <a
-          href="https://wa.me/447767759013?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services"
+          href="https://wa.me/447351282131?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform"

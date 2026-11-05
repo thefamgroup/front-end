@@ -6,7 +6,7 @@ import { CONTACT } from '@/lib/seo-data'
 
 export const metadata: Metadata = {
   title: 'Wheelie Bin Cleaning Manchester | thefamgroup — From £6.99/Bin, No Contract',
-  description: 'Professional wheelie bin cleaning across Greater Manchester, Crewe & Cheshire, Liverpool & Stoke. From £6.99/bin/month — hot water pressure wash, biodegradable sanitiser, timed to your council collection day. No contract. Call 07767 759 013.',
+  description: 'Professional wheelie bin cleaning across Greater Manchester, Crewe & Cheshire, Liverpool & Stoke. From £6.99/bin/month — hot water pressure wash, biodegradable sanitiser, timed to your council collection day. No contract. Call 07351 282 131.',
   alternates: { canonical: `${CONTACT.siteUrl}/cleaning/bin-cleaning/` },
   keywords: [
     'bin cleaning Manchester', 'wheelie bin cleaning Manchester', 'bin wash Manchester',
@@ -24,7 +24,7 @@ const hubSchema = {
       "@id": "https://www.thefamgroup.uk/#business",
       "name": "thefamgroup",
       "url": "https://www.thefamgroup.uk",
-      "telephone": "+447767759013",
+      "telephone": "+447351282131",
       "email": "info@thefamgroup.uk",
       "priceRange": "£",
       "description": "Professional wheelie bin cleaning across Greater Manchester, Crewe & Cheshire East, Liverpool & Merseyside, and Stoke-on-Trent. Hot water pressure wash, biodegradable sanitiser, from £6.99/bin/month. No contract.",
@@ -63,10 +63,10 @@ export default function BinCleaningHubPage() {
             every four weeks on your council collection day. You don&apos;t need to be home.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-            <a href="tel:+447767759013" className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-8 py-4 rounded-full hover:bg-brand-50 transition-colors">
-              <Phone size={18} /> 07767 759 013
+            <a href="tel:+447351282131" className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-8 py-4 rounded-full hover:bg-brand-50 transition-colors">
+              <Phone size={18} /> 07351 282 131
             </a>
-            <a href="https://wa.me/447767759013" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/447351282131" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-8 py-4 rounded-full hover:bg-green-600 transition-colors">
               <MessageCircle size={18} /> WhatsApp to Subscribe
             </a>
@@ -206,10 +206,10 @@ export default function BinCleaningHubPage() {
           <h2 className="text-3xl font-bold font-display mb-3">Start Your Bin Cleaning Subscription</h2>
           <p className="text-brand-100 mb-8">From £6.99/bin/month. No contract. No need to be home. SMS after every clean.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:+447767759013" className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-8 py-4 rounded-full hover:bg-brand-50">
-              <Phone size={18} /> 07767 759 013
+            <a href="tel:+447351282131" className="inline-flex items-center justify-center gap-2 bg-white text-brand-600 font-bold px-8 py-4 rounded-full hover:bg-brand-50">
+              <Phone size={18} /> 07351 282 131
             </a>
-            <a href="https://wa.me/447767759013" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/447351282131" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-green-500 text-white font-bold px-8 py-4 rounded-full hover:bg-green-600">
               <MessageCircle size={18} /> WhatsApp to Subscribe
             </a>
