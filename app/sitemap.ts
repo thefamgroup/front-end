@@ -62,6 +62,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
+  // Bolton borough hub page
+  const boltonPages: MetadataRoute.Sitemap = [
+    { url: `${base}/cleaning/bolton/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
+  ]
+
   // Engine 4: bin cleaning hub + location pages
   const binPages: MetadataRoute.Sitemap = [
     { url: `${base}/cleaning/bin-cleaning/`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
@@ -73,5 +78,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
-  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages, ...binPages]
+  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages, ...boltonPages, ...binPages]
 }

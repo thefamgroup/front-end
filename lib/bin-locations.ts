@@ -16,6 +16,8 @@
 // 5. Word count 2,000+ per page vs competitors' 300–600 words
 // 6. Combined with domestic cleaning = cross-sell angle none of competitors mention
 
+import { BOLTON_BIN_LOCATIONS } from './bolton-bin-locations'
+
 export type BinRegion = 'manchester' | 'crewe' | 'stoke' | 'liverpool' | 'carlisle'
 
 export interface BinLocation {
@@ -1509,6 +1511,9 @@ export const BIN_LOCATIONS: BinLocation[] = [
     localContext:'Appleby-in-Westmorland\'s active Airbnb and short-let market generates exceptional bin demand — holiday properties see rapid waste turnover between guest changeovers, and owners need reliable cleaning to maintain hygiene standards and avoid odour complaints from neighbours.',
     propertyTypes:'Stone cottages, holiday lets, traditional townhouses, rural Eden Valley properties',
     nearbyAreas:['penrith-bin','kirkby-stephen-bin','carlisle-city-centre-bin'] },
+
+  // ── BOLTON EXPANSION — 24 additional borough bin pages ──
+  ...BOLTON_BIN_LOCATIONS,
 ]
 
 // ─────────────────────────────────────────────────────────────────
