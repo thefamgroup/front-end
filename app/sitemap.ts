@@ -3,6 +3,7 @@ import { SERVICES, LOCATIONS } from '@/lib/seo-data'
 import { CARPET_LOCATIONS } from '@/lib/carpet-locations'
 import { OFFICE_LOCATIONS } from '@/lib/office-locations'
 import { BIN_LOCATIONS } from '@/lib/bin-locations'
+import { BLOG_POSTS } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.thefamgroup.uk'
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/service-areas`,         lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/about`,                lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/contact`,              lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/`,                lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     { url: `${base}/careers`,              lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/privacy-policy`,       lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
     { url: `${base}/terms-of-service`,     lastModified: now, changeFrequency: 'yearly',  priority: 0.3 },
@@ -62,6 +64,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
+  // Blog posts
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(post => ({
+    url: `${base}/blog/${post.slug}/`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   // Bolton borough hub page
   const boltonPages: MetadataRoute.Sitemap = [
     { url: `${base}/cleaning/bolton/`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.8 },
@@ -78,5 +88,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
-  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages, ...boltonPages, ...binPages]
+  return [...staticPages, ...servicePages, ...locationPages, ...carpetPages, ...officePages, ...boltonPages, ...binPages, ...blogPages]
 }

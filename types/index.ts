@@ -92,12 +92,17 @@ export interface Testimonial {
 
 export interface BlogPost {
   id: string
+  slug: string
   title: string
   excerpt: string
+  metaDescription: string
   category: string
   date: string
   readTime: string
   emoji: string
+  content: string[]        // paragraphs; a string starting with "## " renders as an H2
+  relatedHref?: string     // internal link to a relevant service/location page
+  relatedLabel?: string
 }
 
 export interface ServiceCard {
