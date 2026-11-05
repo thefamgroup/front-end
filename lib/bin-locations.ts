@@ -287,7 +287,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling',
     localContext:'Whalley Range\'s large Victorian properties split into flats generate significant bin demand — multiple flat bins in one property means multiple subscription opportunities from a single address.',
     propertyTypes:'Large Victorian houses converted to flats, family rentals — buildings with multiple bin sets per property',
-    nearbyAreas:['chorlton-bin','moss-side-bin','old-trafford-bin'] },
+    nearbyAreas:['chorlton-bin','moss-side-bin','old-trafford-manchester-bin'] },
 
   { slug:'burnage-bin', name:'Burnage', postcode:'M19',
     region:'manchester', borough:'Manchester', tier:2,
@@ -503,7 +503,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste (black bin), fortnightly recycling (brown and blue bins alternating)',
     localContext:'Northenden\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Northenden families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Semis, detached houses, family private rentals',
-    nearbyAreas:['wythenshawe-bin','didsbury-bin','gatley-bin'] },
+    nearbyAreas:['wythenshawe-bin','didsbury-bin','wythenshawe-bin'] },
 
   { slug:'harpurhey-bin', name:'Harpurhey', postcode:'M9',
     region:'manchester', borough:'Manchester', tier:2,
@@ -511,7 +511,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste (black bin), fortnightly recycling (brown and blue bins alternating)',
     localContext:'Harpurhey has an active residential market with consistent demand for professional bin cleaning. Whether it\'s Victorian terraces, family semis, or private rentals, bins across Harpurhey benefit from regular four-weekly cleaning — preventing bacteria, odours, and pest issues that build up between Manchester City Council collection days.',
     propertyTypes:'Terraced houses, council and private lets',
-    nearbyAreas:['crumpsall-bin','collyhurst-bin','moston-bin'] },
+    nearbyAreas:['crumpsall-bin','crumpsall-bin','moston-bin'] },
 
   { slug:'crumpsall-bin', name:'Crumpsall', postcode:'M8',
     region:'manchester', borough:'Manchester', tier:2,
@@ -535,7 +535,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste (black bin), fortnightly recycling (brown and blue bins alternating)',
     localContext:'Moston has an active residential market with consistent demand for professional bin cleaning. Whether it\'s Victorian terraces, family semis, or private rentals, bins across Moston benefit from regular four-weekly cleaning — preventing bacteria, odours, and pest issues that build up between Manchester City Council collection days.',
     propertyTypes:'Interwar semis, terraces, private lets',
-    nearbyAreas:['harpurhey-bin','newton-heath-bin','collyhurst-bin'] },
+    nearbyAreas:['harpurhey-bin','newton-heath-bin','harpurhey-bin'] },
 
   { slug:'newton-heath-bin', name:'Newton Heath', postcode:'M40',
     region:'manchester', borough:'Manchester', tier:3,
@@ -543,7 +543,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste (black bin), fortnightly recycling (brown and blue bins alternating)',
     localContext:'Newton Heath has an active residential market with consistent demand for professional bin cleaning. Whether it\'s Victorian terraces, family semis, or private rentals, bins across Newton Heath benefit from regular four-weekly cleaning — preventing bacteria, odours, and pest issues that build up between Manchester City Council collection days.',
     propertyTypes:'Terraced houses, private lets, emerging new builds',
-    nearbyAreas:['moston-bin','collyhurst-bin','openshaw-bin'] },
+    nearbyAreas:['moston-bin','moston-bin','openshaw-bin'] },
 
   { slug:'new-islington-bin', name:'New Islington', postcode:'M4',
     region:'manchester', borough:'Manchester', tier:2,
@@ -567,7 +567,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Salford City Council',
     localContext:'Monton\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Monton proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian semis and terraces, professional rentals, family homes',
-    nearbyAreas:['eccles-bin','worsley-bin','boothstown-bin'] },
+    nearbyAreas:['eccles-bin','worsley-bin','worsley-bin'] },
 
   { slug:'swinton-bin', name:'Swinton', postcode:'M27',
     region:'manchester', borough:'Salford', tier:2,
@@ -583,7 +583,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Salford City Council',
     localContext:'Worsley\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Executive family homes, detached properties, premium rentals',
-    nearbyAreas:['monton-bin','boothstown-bin','walkden-bin'] },
+    nearbyAreas:['monton-bin','monton-bin','swinton-bin'] },
 
   { slug:'pendlebury-bin', name:'Pendlebury', postcode:'M27',
     region:'manchester', borough:'Salford', tier:3,
@@ -615,7 +615,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Trafford Council',
     localContext:'Bowdon\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Large Victorian villas, premium detached homes, luxury rentals',
-    nearbyAreas:['altrincham-bin','hale-bin','ashley-bin'] },
+    nearbyAreas:['altrincham-bin','hale-bin','hale-bin'] },
 
   { slug:'partington-bin', name:'Partington', postcode:'M31',
     region:'manchester', borough:'Trafford', tier:3,
@@ -623,7 +623,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Trafford Council',
     localContext:'Partington\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Partington families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Estate housing, council and private lets, family homes',
-    nearbyAreas:['urmston-bin','sale-bin','carrington-bin'] },
+    nearbyAreas:['urmston-bin','sale-bin','urmston-bin'] },
 
   { slug:'stockport-town-centre-bin', name:'Stockport', postcode:'SK1',
     region:'manchester', borough:'Stockport', tier:1,
@@ -639,7 +639,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stockport MBC',
     localContext:'Edgeley\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, converted flats, professional lets',
-    nearbyAreas:['stockport-bin','cheadle-bin','adswood-bin'] },
+    nearbyAreas:['stockport-bin','cheadle-bin','stockport-bin'] },
 
   { slug:'heaton-chapel-bin', name:'Heaton Chapel', postcode:'SK4',
     region:'manchester', borough:'Stockport', tier:2,
@@ -655,7 +655,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stockport MBC',
     localContext:'Marple\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Marple families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Family semis, detached homes, countryside rentals',
-    nearbyAreas:['hazel-grove-bin','romiley-bin','new-mills-bin'] },
+    nearbyAreas:['hazel-grove-bin','hazel-grove-bin','offerton-bin'] },
 
   { slug:'ashton-under-lyne-bin', name:'Ashton-under-Lyne', postcode:'OL6',
     region:'manchester', borough:'Tameside', tier:1,
@@ -671,7 +671,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Tameside MBC',
     localContext:'Stalybridge\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, hill-side properties, affordable rentals',
-    nearbyAreas:['ashton-under-lyne-bin','hyde-bin','mossley-bin'] },
+    nearbyAreas:['ashton-under-lyne-bin','hyde-bin','hyde-bin'] },
 
   { slug:'hyde-bin', name:'Hyde', postcode:'SK14',
     region:'manchester', borough:'Tameside', tier:2,
@@ -679,7 +679,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Tameside MBC',
     localContext:'Hyde\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Hyde families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Terraced houses, semis, affordable family rentals',
-    nearbyAreas:['denton-bin','stalybridge-bin','glossop-bin'] },
+    nearbyAreas:['denton-bin','stalybridge-bin','denton-bin'] },
 
   { slug:'denton-bin', name:'Denton', postcode:'M34',
     region:'manchester', borough:'Tameside', tier:2,
@@ -743,7 +743,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Bolton Council',
     localContext:'Horwich\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Horwich families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'New build estates, semis, family rentals',
-    nearbyAreas:['bolton-bin','westhoughton-bin','adlington-bin'] },
+    nearbyAreas:['bolton-bin','westhoughton-bin','blackrod-bin'] },
 
   { slug:'whitefield-bin', name:'Whitefield', postcode:'M45',
     region:'manchester', borough:'Bury', tier:2,
@@ -835,7 +835,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Haslington\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Haslington families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'New build estates, semis, village homes',
-    nearbyAreas:['crewe-bin','sandbach-bin','barthomley-bin'] },
+    nearbyAreas:['crewe-bin','sandbach-bin','crewe-east-bin'] },
 
   { slug:'wistaston-bin', name:'Wistaston', postcode:'CW2',
     region:'crewe', borough:'Cheshire East', tier:2,
@@ -859,7 +859,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Wrenbury\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Rural cottages, village properties, premium rentals',
-    nearbyAreas:['nantwich-bin','audlem-bin','whitchurch-bin'] },
+    nearbyAreas:['nantwich-bin','audlem-bin','nantwich-bin'] },
 
   { slug:'audlem-bin', name:'Audlem', postcode:'CW3',
     region:'crewe', borough:'Cheshire East', tier:3,
@@ -867,7 +867,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Audlem\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Canal-side cottages, village houses, rural premium properties',
-    nearbyAreas:['nantwich-bin','market-drayton-bin'] },
+    nearbyAreas:['nantwich-bin','nantwich-bin'] },
 
   { slug:'bunbury-bin', name:'Bunbury', postcode:'CW6',
     region:'crewe', borough:'Cheshire East', tier:3,
@@ -883,7 +883,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Tarporley\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Georgian townhouses, detached family homes, premium rural properties',
-    nearbyAreas:['bunbury-bin','nantwich-bin','northwich-bin'] },
+    nearbyAreas:['bunbury-bin','nantwich-bin','middlewich-bin'] },
 
   { slug:'holmes-chapel-bin', name:'Holmes Chapel', postcode:'CW4',
     region:'crewe', borough:'Cheshire East', tier:2,
@@ -923,7 +923,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Handforth\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Handforth families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Family semis, detached homes, private rentals',
-    nearbyAreas:['wilmslow-bin','cheadle-hulme-bin','poynton-bin'] },
+    nearbyAreas:['wilmslow-bin','cheadle-hulme-bin','wilmslow-bin'] },
 
   { slug:'disley-bin', name:'Disley', postcode:'SK12',
     region:'crewe', borough:'Cheshire East', tier:3,
@@ -931,7 +931,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Disley\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Countryside cottages, village properties, premium family homes',
-    nearbyAreas:['poynton-bin','hazel-grove-bin','new-mills-bin'] },
+    nearbyAreas:['hazel-grove-bin','hazel-grove-bin','bollington-bin'] },
 
   { slug:'bollington-bin', name:'Bollington', postcode:'SK10',
     region:'crewe', borough:'Cheshire East', tier:3,
@@ -947,7 +947,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cheshire East)',
     localContext:'Winsford\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Winsford families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Estate housing, semis, private lets, family homes',
-    nearbyAreas:['middlewich-bin','northwich-bin','tarporley-bin'] },
+    nearbyAreas:['middlewich-bin','middlewich-bin','tarporley-bin'] },
 
   // ═══════════════════════════════════════════════
   // STOKE & STAFFORDSHIRE — additional areas
@@ -959,7 +959,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Hanley\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Hanley are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'City centre flats, student accommodation, HMOs, converted properties',
-    nearbyAreas:['shelton-bin','cobridge-bin','sneyd-green-bin','burslem-bin'] },
+    nearbyAreas:['shelton-bin','cobridge-bin','cobridge-bin','burslem-bin'] },
 
   { slug:'shelton-bin', name:'Shelton', postcode:'ST4',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -967,7 +967,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Shelton\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Shelton are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'Student HMOs, shared houses, university-area private lets',
-    nearbyAreas:['hanley-bin','stoke-bin','basford-bin'] },
+    nearbyAreas:['hanley-bin','stoke-bin','hanley-bin'] },
 
   { slug:'fenton-bin', name:'Fenton', postcode:'ST4',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -991,7 +991,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Meir\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Meir families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Interwar semis, terraces, family rentals',
-    nearbyAreas:['longton-bin','blurton-bin','weston-coyney-bin'] },
+    nearbyAreas:['longton-bin','blurton-bin','longton-bin'] },
 
   { slug:'blurton-bin', name:'Blurton', postcode:'ST3',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -1039,7 +1039,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Tunstall\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Tunstall proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, affordable private lets, family rentals',
-    nearbyAreas:['burslem-bin','kidsgrove-bin','chell-bin'] },
+    nearbyAreas:['burslem-bin','kidsgrove-bin','burslem-bin'] },
 
   { slug:'cobridge-bin', name:'Cobridge', postcode:'ST6',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -1047,7 +1047,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Cobridge has a high density of HMOs and shared houses generating consistent organic waste from multiple occupants. Landlords managing properties here find regular bin cleaning prevents complaints, protects against pest issues, and keeps bins in good condition between tenancies.',
     propertyTypes:'Victorian terraces, HMOs, private lets',
-    nearbyAreas:['hanley-bin','burslem-bin','sneyd-green-bin'] },
+    nearbyAreas:['hanley-bin','burslem-bin','burslem-bin'] },
 
   { slug:'bentilee-bin', name:'Bentilee', postcode:'ST2',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -1055,7 +1055,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Bentilee\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Bentilee families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Council and ex-council houses, private lets, family homes',
-    nearbyAreas:['abbey-hulton-bin','bucknall-bin','hanley-bin'] },
+    nearbyAreas:['bucknall-bin','bucknall-bin','hanley-bin'] },
 
   { slug:'bucknall-bin', name:'Bucknall', postcode:'ST2',
     region:'stoke', borough:'Stoke-on-Trent', tier:2,
@@ -1063,7 +1063,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Stoke-on-Trent City Council',
     localContext:'Bucknall has an active residential market with consistent demand for professional bin cleaning. Whether it\'s Victorian terraces, family semis, or private rentals, bins across Bucknall benefit from regular four-weekly cleaning — preventing bacteria, odours, and pest issues that build up between Stoke-on-Trent City Council collection days.',
     propertyTypes:'Estate housing, semis, private lets',
-    nearbyAreas:['bentilee-bin','hanley-bin','abbey-hulton-bin'] },
+    nearbyAreas:['bentilee-bin','hanley-bin','bentilee-bin'] },
 
   { slug:'keele-bin', name:'Keele', postcode:'ST5',
     region:'stoke', borough:'Newcastle-under-Lyme', tier:2,
@@ -1071,7 +1071,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks',
     localContext:'Keele\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Keele are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'Student private lets, academic staff rentals, village properties',
-    nearbyAreas:['newcastle-under-lyme-bin','stoke-bin','madeley-bin'] },
+    nearbyAreas:['newcastle-under-lyme-bin','stoke-bin','newcastle-under-lyme-bin'] },
 
   { slug:'kidsgrove-bin', name:'Kidsgrove', postcode:'ST7',
     region:'stoke', borough:'Newcastle-under-Lyme', tier:2,
@@ -1079,7 +1079,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks',
     localContext:'Kidsgrove\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Kidsgrove families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Terraced houses, semis, family rentals',
-    nearbyAreas:['alsager-bin','newcastle-under-lyme-bin','biddulph-bin'] },
+    nearbyAreas:['alsager-bin','newcastle-under-lyme-bin','tunstall-bin'] },
 
   { slug:'stone-staffordshire-bin', name:'Stone', postcode:'ST15',
     region:'stoke', borough:'Stafford', tier:2,
@@ -1087,7 +1087,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Stafford)',
     localContext:'Stone\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Stone families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Georgian townhouses, semis, family rentals',
-    nearbyAreas:['newcastle-under-lyme-bin','stafford-bin','eccleshall-bin'] },
+    nearbyAreas:['newcastle-under-lyme-bin','stafford-bin','stafford-bin'] },
 
   { slug:'stafford-bin', name:'Stafford', postcode:'ST16',
     region:'stoke', borough:'Stafford', tier:1,
@@ -1095,7 +1095,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Stafford)',
     localContext:'Stafford\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Stafford proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, family semis, town centre flats, professional lets',
-    nearbyAreas:['stone-bin','newport-bin','rugeley-bin'] },
+    nearbyAreas:['stone-staffordshire-bin','newcastle-under-lyme-bin','stone-staffordshire-bin'] },
 
   // ═══════════════════════════════════════════════
   // LIVERPOOL & MERSEYSIDE — additional areas
@@ -1107,7 +1107,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Liverpool City Centre\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Liverpool City Centre are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'City centre apartments, serviced accommodation, Airbnb properties, luxury flats',
-    nearbyAreas:['baltic-triangle-bin','ropewalks-bin','everton-bin','vauxhall-bin'] },
+    nearbyAreas:['baltic-triangle-bin','ropewalks-bin','everton-bin','everton-bin'] },
 
   { slug:'baltic-triangle-bin', name:'Baltic Triangle', postcode:'L1',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1131,7 +1131,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Everton\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Everton proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, regenerated properties, private lets',
-    nearbyAreas:['liverpool-city-centre-bin','anfield-bin','walton-bin'] },
+    nearbyAreas:['liverpool-city-centre-bin','anfield-bin','walton-liverpool-bin'] },
 
   { slug:'anfield-bin', name:'Anfield', postcode:'L4',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1139,7 +1139,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Anfield\'s active Airbnb and short-let market generates exceptional bin demand — holiday properties see rapid waste turnover between guest changeovers, and owners need reliable cleaning to maintain hygiene standards and avoid odour complaints from neighbours.',
     propertyTypes:'Victorian terraces, private lets, match-day Airbnb properties',
-    nearbyAreas:['everton-bin','walton-bin','kirkdale-bin'] },
+    nearbyAreas:['everton-bin','walton-liverpool-bin','kirkdale-bin'] },
 
   { slug:'walton-liverpool-bin', name:'Walton', postcode:'L9',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1155,7 +1155,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Kirkdale has an active residential market with consistent demand for professional bin cleaning. Whether it\'s Victorian terraces, family semis, or private rentals, bins across Kirkdale benefit from regular four-weekly cleaning — preventing bacteria, odours, and pest issues that build up between Liverpool City Council collection days.',
     propertyTypes:'Terraced houses, private lets, mixed residential',
-    nearbyAreas:['walton-bin','everton-bin','bootle-bin'] },
+    nearbyAreas:['walton-liverpool-bin','everton-bin','bootle-bin'] },
 
   { slug:'toxteth-bin', name:'Toxteth', postcode:'L8',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1179,7 +1179,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Edge Hill\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Edge Hill are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'Student HMOs, shared houses, university-area private lets, purpose-built student blocks',
-    nearbyAreas:['kensington-bin','wavertree-bin','liverpool-city-centre-bin'] },
+    nearbyAreas:['kensington-liverpool-bin','wavertree-bin','liverpool-city-centre-bin'] },
 
   { slug:'kensington-liverpool-bin', name:'Kensington', postcode:'L7',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1187,7 +1187,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Kensington\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Kensington are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'Student HMOs, professional flats, converted Victorian houses',
-    nearbyAreas:['edge-hill-bin','wavertree-bin','fairfield-bin'] },
+    nearbyAreas:['edge-hill-bin','wavertree-bin','edge-hill-bin'] },
 
   { slug:'wavertree-bin', name:'Wavertree', postcode:'L15',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1203,7 +1203,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Aigburth\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Large Victorian semis, premium rentals, family homes',
-    nearbyAreas:['sefton-park-bin','grassendale-bin','allerton-bin'] },
+    nearbyAreas:['sefton-park-bin','sefton-park-bin','allerton-bin'] },
 
   { slug:'mossley-hill-bin', name:'Mossley Hill', postcode:'L18',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1227,7 +1227,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Woolton\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Large detached homes, premium semis, high-value rental properties',
-    nearbyAreas:['allerton-bin','hunts-cross-bin','gateacre-bin'] },
+    nearbyAreas:['allerton-bin','hunts-cross-bin','childwall-bin'] },
 
   { slug:'west-derby-bin', name:'West Derby', postcode:'L12',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1251,7 +1251,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Croxteth\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Croxteth families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Estate housing, private lets, family homes',
-    nearbyAreas:['norris-green-bin','gillmoss-bin','west-derby-bin'] },
+    nearbyAreas:['norris-green-bin','norris-green-bin','west-derby-bin'] },
 
   { slug:'fazakerley-bin', name:'Fazakerley', postcode:'L9',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1259,7 +1259,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Fazakerley\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Fazakerley families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Interwar semis, terraces, private lets, family rentals',
-    nearbyAreas:['walton-bin','aintree-bin','norris-green-bin'] },
+    nearbyAreas:['walton-liverpool-bin','aintree-bin','norris-green-bin'] },
 
   { slug:'aintree-bin', name:'Aintree', postcode:'L10',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1267,7 +1267,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Aintree\'s active Airbnb and short-let market generates exceptional bin demand — holiday properties see rapid waste turnover between guest changeovers, and owners need reliable cleaning to maintain hygiene standards and avoid odour complaints from neighbours.',
     propertyTypes:'Semis, family rentals, race-day Airbnb properties',
-    nearbyAreas:['fazakerley-bin','walton-bin','maghull-bin'] },
+    nearbyAreas:['fazakerley-bin','walton-liverpool-bin','maghull-bin'] },
 
   { slug:'old-swan-bin', name:'Old Swan', postcode:'L13',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1275,7 +1275,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Old Swan\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, interwar semis, private lets',
-    nearbyAreas:['wavertree-bin','kensington-bin','west-derby-bin'] },
+    nearbyAreas:['wavertree-bin','kensington-liverpool-bin','west-derby-bin'] },
 
   { slug:'broadgreen-bin', name:'Broadgreen', postcode:'L14',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1283,7 +1283,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Broadgreen\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Broadgreen families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Semis, family rentals, professional lets',
-    nearbyAreas:['childwall-bin','old-swan-bin','knotty-ash-bin'] },
+    nearbyAreas:['childwall-bin','old-swan-bin','old-swan-bin'] },
 
   { slug:'tuebrook-bin', name:'Tuebrook', postcode:'L13',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1291,7 +1291,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Liverpool City Council',
     localContext:'Tuebrook\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Tuebrook are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'Victorian terraces, HMOs, student and professional lets',
-    nearbyAreas:['old-swan-bin','kensington-bin','west-derby-bin'] },
+    nearbyAreas:['old-swan-bin','kensington-liverpool-bin','west-derby-bin'] },
 
   { slug:'speke-bin', name:'Speke', postcode:'L24',
     region:'liverpool', borough:'Liverpool', tier:2,
@@ -1323,7 +1323,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Knowsley)',
     localContext:'Halewood\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Halewood families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'New build estates, family homes, worker rentals',
-    nearbyAreas:['speke-bin','huyton-bin','whiston-bin'] },
+    nearbyAreas:['speke-bin','huyton-bin','huyton-bin'] },
 
   { slug:'huyton-bin', name:'Huyton', postcode:'L36',
     region:'liverpool', borough:'Knowsley', tier:2,
@@ -1347,7 +1347,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Knowsley)',
     localContext:'Prescot\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, family semis, private lets',
-    nearbyAreas:['huyton-bin','whiston-bin','st-helens-bin'] },
+    nearbyAreas:['huyton-bin','huyton-bin','st-helens-bin'] },
 
   { slug:'bootle-bin', name:'Bootle', postcode:'L20',
     region:'liverpool', borough:'Sefton', tier:2,
@@ -1355,7 +1355,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Sefton Council',
     localContext:'Bootle\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, private lets, family rentals',
-    nearbyAreas:['kirkdale-bin','seaforth-bin','litherland-bin'] },
+    nearbyAreas:['kirkdale-bin','crosby-bin','waterloo-liverpool-bin'] },
 
   { slug:'crosby-bin', name:'Crosby', postcode:'L23',
     region:'liverpool', borough:'Sefton', tier:2,
@@ -1363,7 +1363,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Sefton Council',
     localContext:'Crosby\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Crosby proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian semis, family homes, professional rentals',
-    nearbyAreas:['waterloo-bin','formby-bin','bootle-bin'] },
+    nearbyAreas:['waterloo-liverpool-bin','formby-bin','bootle-bin'] },
 
   { slug:'formby-bin', name:'Formby', postcode:'L37',
     region:'liverpool', borough:'Sefton', tier:2,
@@ -1387,7 +1387,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by Sefton Council',
     localContext:'Waterloo\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Waterloo proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian semis, professional rentals, coastal properties',
-    nearbyAreas:['crosby-bin','bootle-bin','litherland-bin'] },
+    nearbyAreas:['crosby-bin','bootle-bin','crosby-bin'] },
 
   { slug:'st-helens-bin', name:'St Helens', postcode:'WA10',
     region:'liverpool', borough:'St Helens', tier:1,
@@ -1395,7 +1395,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by St Helens Council',
     localContext:'St Helens has a high density of HMOs and shared houses generating consistent organic waste from multiple occupants. Landlords managing properties here find regular bin cleaning prevents complaints, protects against pest issues, and keeps bins in good condition between tenancies.',
     propertyTypes:'Victorian terraces, interwar semis, family rentals, HMOs',
-    nearbyAreas:['prescot-bin','haydock-bin','earlestown-bin'] },
+    nearbyAreas:['prescot-bin','haydock-bin','newton-le-willows-bin'] },
 
   { slug:'haydock-bin', name:'Haydock', postcode:'WA11',
     region:'liverpool', borough:'St Helens', tier:2,
@@ -1411,7 +1411,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Weekly general waste, fortnightly recycling managed by St Helens Council',
     localContext:'Newton-le-Willows\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Newton-le-Willows families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Semis, family homes, commuter rentals',
-    nearbyAreas:['st-helens-bin','haydock-bin','warrington-bin'] },
+    nearbyAreas:['st-helens-bin','haydock-bin','st-helens-bin'] },
 
   { slug:'birkenhead-bin', name:'Birkenhead', postcode:'CH41',
     region:'liverpool', borough:'Wirral', tier:1,
@@ -1419,7 +1419,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Wirral)',
     localContext:'Birkenhead\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Birkenhead proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, town centre flats, HMOs, private lets',
-    nearbyAreas:['wallasey-bin','prenton-bin','bebington-bin'] },
+    nearbyAreas:['wallasey-bin','wallasey-bin','bebington-bin'] },
 
   { slug:'wallasey-bin', name:'Wallasey', postcode:'CH44',
     region:'liverpool', borough:'Wirral', tier:2,
@@ -1427,7 +1427,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Wirral)',
     localContext:'Wallasey\'s dense Victorian terraces create ideal route density for bin cleaning — streets of back-to-back properties with busy family and rental bins that benefit from regular four-weekly professional cleaning. The tight spacing between properties makes bin hygiene especially important for maintaining good relations between neighbours.',
     propertyTypes:'Victorian terraces, interwar semis, coastal private lets',
-    nearbyAreas:['birkenhead-bin','new-brighton-bin','liscard-bin'] },
+    nearbyAreas:['birkenhead-bin','birkenhead-bin','west-kirby-bin'] },
 
   { slug:'bebington-bin', name:'Bebington', postcode:'CH63',
     region:'liverpool', borough:'Wirral', tier:2,
@@ -1435,7 +1435,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Wirral)',
     localContext:'Bebington\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Edwardian semis, detached family homes, premium rentals',
-    nearbyAreas:['birkenhead-bin','bromborough-bin','heswall-bin'] },
+    nearbyAreas:['birkenhead-bin','heswall-bin','heswall-bin'] },
 
   { slug:'heswall-bin', name:'Heswall', postcode:'CH60',
     region:'liverpool', borough:'Wirral', tier:2,
@@ -1443,7 +1443,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Wirral)',
     localContext:'Heswall\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Large detached homes, premium properties, executive rentals',
-    nearbyAreas:['west-kirby-bin','bebington-bin','neston-bin'] },
+    nearbyAreas:['west-kirby-bin','bebington-bin','west-kirby-bin'] },
 
   { slug:'west-kirby-bin', name:'West Kirby', postcode:'CH48',
     region:'liverpool', borough:'Wirral', tier:2,
@@ -1451,7 +1451,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Wirral)',
     localContext:'West Kirby\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Coastal properties, premium detached homes, executive rentals',
-    nearbyAreas:['hoylake-bin','heswall-bin','meols-bin'] },
+    nearbyAreas:['heswall-bin','heswall-bin','bebington-bin'] },
 
   // ═══════════════════════════════════════════════
   // CARLISLE & CUMBRIA
@@ -1463,7 +1463,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Carlisle City Centre\'s high student density means bins are used hard — 4–8 person HMOs generate significant food waste and general mess throughout the academic year. Landlords in Carlisle City Centre are increasingly adding bin cleaning to their service contracts to keep properties hygienic and avoid end-of-tenancy disputes over filthy bins.',
     propertyTypes:'City centre apartments, converted Victorian townhouses, student accommodation, professional lets',
-    nearbyAreas:['stanwix-bin','botcherby-bin','harraby-bin','caldewgate-bin'] },
+    nearbyAreas:['stanwix-bin','botcherby-bin','botcherby-bin','stanwix-bin'] },
 
   { slug:'stanwix-bin', name:'Stanwix', postcode:'CA3',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1471,7 +1471,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Stanwix\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Stanwix proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian semis, Edwardian detached homes, professional and family private rentals',
-    nearbyAreas:['carlisle-city-centre-bin','etterby-bin','kingstown-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','carlisle-city-centre-bin','dalston-bin'] },
 
   { slug:'botcherby-bin', name:'Botcherby', postcode:'CA1',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1479,7 +1479,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Botcherby\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Botcherby families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Interwar semis, postwar estate housing, private family lets',
-    nearbyAreas:['carlisle-city-centre-bin','harraby-bin','upperby-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','carlisle-city-centre-bin','scotby-bin'] },
 
   { slug:'scotby-bin', name:'Scotby', postcode:'CA4',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1487,7 +1487,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Scotby\'s affluent homeowners maintain their properties to the highest standard — and that includes their bins. This is a premium bin cleaning market: residents here subscribe readily, rarely cancel, and expect the same professional approach to their wheelie bins as to every other home service.',
     propertyTypes:'Detached village properties, executive homes, premium family rentals',
-    nearbyAreas:['carlisle-city-centre-bin','brampton-bin','wetheral-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','brampton-bin','brampton-bin'] },
 
   { slug:'dalston-bin', name:'Dalston', postcode:'CA5',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1495,7 +1495,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Dalston\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Dalston families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Detached rural properties, village semis, character family rentals',
-    nearbyAreas:['carlisle-city-centre-bin','wigton-bin','thursby-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','wigton-bin','wigton-bin'] },
 
   { slug:'wigton-bin', name:'Wigton', postcode:'CA7',
     region:'carlisle', borough:'Carlisle', tier:1,
@@ -1503,7 +1503,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Wigton\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Wigton proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, market town semis, family rentals',
-    nearbyAreas:['carlisle-city-centre-bin','dalston-bin','aspatria-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','dalston-bin','dalston-bin'] },
 
   { slug:'brampton-bin', name:'Brampton', postcode:'CA8',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1511,7 +1511,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Brampton\'s active Airbnb and short-let market generates exceptional bin demand — holiday properties see rapid waste turnover between guest changeovers, and owners need reliable cleaning to maintain hygiene standards and avoid odour complaints from neighbours.',
     propertyTypes:'Stone cottages, holiday lets, market town semis, rural rentals',
-    nearbyAreas:['carlisle-city-centre-bin','scotby-bin','haltwhistle-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','scotby-bin','longtown-bin'] },
 
   { slug:'longtown-bin', name:'Longtown', postcode:'CA6',
     region:'carlisle', borough:'Carlisle', tier:2,
@@ -1519,7 +1519,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Longtown\'s professional rental market has high standards and consistent demand for bin cleaning subscriptions. Tenants here notice dirty bins, value convenience services, and landlords in Longtown proactively manage bin hygiene to protect their properties and attract quality tenants.',
     propertyTypes:'Victorian terraces, family semis, private lets, border-town properties',
-    nearbyAreas:['carlisle-city-centre-bin','gretna-bin','canonbie-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','carlisle-city-centre-bin','brampton-bin'] },
 
   { slug:'penrith-bin', name:'Penrith', postcode:'CA11',
     region:'carlisle', borough:'Eden', tier:1,
@@ -1527,7 +1527,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Penrith\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Penrith families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Stone townhouses, family semis, rural cottages, holiday lets',
-    nearbyAreas:['carlisle-city-centre-bin','appleby-in-westmorland-bin','keswick-bin'] },
+    nearbyAreas:['carlisle-city-centre-bin','appleby-in-westmorland-bin','appleby-in-westmorland-bin'] },
 
   { slug:'appleby-in-westmorland-bin', name:'Appleby-in-Westmorland', postcode:'CA16',
     region:'carlisle', borough:'Eden', tier:3,
@@ -1535,7 +1535,7 @@ export const BIN_LOCATIONS: BinLocation[] = [
     collectionFrequency:'Fortnightly general waste, fortnightly recycling on alternate weeks (Cumberland)',
     localContext:'Appleby-in-Westmorland\'s active Airbnb and short-let market generates exceptional bin demand — holiday properties see rapid waste turnover between guest changeovers, and owners need reliable cleaning to maintain hygiene standards and avoid odour complaints from neighbours.',
     propertyTypes:'Stone cottages, holiday lets, traditional townhouses, rural Eden Valley properties',
-    nearbyAreas:['penrith-bin','kirkby-stephen-bin','carlisle-city-centre-bin'] },
+    nearbyAreas:['penrith-bin','penrith-bin','carlisle-city-centre-bin'] },
 
   // ── BOLTON EXPANSION — 24 additional borough bin pages ──
   ...BOLTON_BIN_LOCATIONS,

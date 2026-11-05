@@ -74,7 +74,7 @@ describe('nearbyAreas resolve correctly', () => {
     }
   })
 
-  it('BIN_LOCATIONS nearbyAreas (already real slugs, not names) mostly resolve to real bin pages', () => {
+  it('BIN_LOCATIONS nearbyAreas (already real slugs, not names) all resolve to real bin pages', () => {
     const slugs = new Set(BIN_LOCATIONS.map(l => l.slug))
     const dangling: string[] = []
     for (const loc of BIN_LOCATIONS) {
@@ -82,11 +82,10 @@ describe('nearbyAreas resolve correctly', () => {
         if (!slugs.has(near)) dangling.push(`${loc.slug} -> ${near}`)
       }
     }
-    // KNOWN ISSUE: 81 dangling links as of Nov 2026 (the bin engine grew from 128 to 232
-    // locations since the original audit's "28 of 128" count without re-checking). This
-    // asserts the count hasn't regressed further upward — it is a baseline, not a target.
-    // Tighten this number down as dangling links get fixed; see the audit report for the list.
-    expect(dangling.length).toBeLessThanOrEqual(81)
+    // Was 81 dangling links as of Nov 2026 (the bin engine grew from 128 to 232 locations
+    // since the original audit's "28 of 128" count without re-checking) — all fixed by
+    // swapping each for a real, geographically sensible neighbour. Zero tolerance now.
+    expect(dangling).toEqual([])
   })
 })
 
