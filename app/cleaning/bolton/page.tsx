@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, MessageCircle, MapPin } from 'lucide-react'
 import { SERVICES, LOCATIONS, CONTACT } from '@/lib/seo-data'
 import { BIN_LOCATIONS } from '@/lib/bin-locations'
+import { CARPET_LOCATIONS } from '@/lib/carpet-locations'
 
 const canonical = `${CONTACT.siteUrl}/cleaning/bolton/`
 const title = 'Cleaning Services Bolton | End of Tenancy, Deep, Carpet & Bin Cleaning'
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function BoltonHub() {
   const areas = LOCATIONS.filter(l => l.borough === 'Bolton').sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
   const binSlugs = new Set(BIN_LOCATIONS.map(l => l.slug))
+  const carpetSlugs = new Set(CARPET_LOCATIONS.map(l => l.slug))
   const wa = encodeURIComponent('Hi thefamgroup, I need a cleaning quote in Bolton.')
 
   const schema = {
@@ -64,6 +66,9 @@ export default function BoltonHub() {
                         {SERVICES.map(s => (
                           <Link key={s.slug} href={`/cleaning/${s.slug}/${a.slug}/`} className="text-brand-600 hover:underline">{s.name}</Link>
                         ))}
+                        {carpetSlugs.has(a.slug) && (
+                          <Link href={`/cleaning/carpet-cleaning/${a.slug}/`} className="text-brand-600 font-semibold hover:underline">Carpet Cleaning</Link>
+                        )}
                         {binSlugs.has(`${a.slug}-bin`) && (
                           <Link href={`/cleaning/bin-cleaning/${a.slug}-bin/`} className="text-brand-600 font-semibold hover:underline">Bin Cleaning</Link>
                         )}
