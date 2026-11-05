@@ -2,6 +2,8 @@
 // EXPANDED LOCATION DATABASE — 5 Regions, 200+ hyper-local areas
 // Greater Manchester (10 boroughs) | Crewe & Cheshire East | Stoke-on-Trent | Liverpool & Merseyside | Carlisle & Cumbria
 
+import { BOLTON_EXTRA_LOCATIONS } from './bolton-locations'
+
 export type Region = 'manchester' | 'crewe' | 'stoke' | 'liverpool' | 'carlisle'
 
 export interface LocationData {
@@ -241,6 +243,9 @@ export const LOCATIONS_EXPANDED: LocationData[] = [
   { slug:'longtown', name:'Longtown', postcode:'CA6', region:'carlisle', borough:'Carlisle', tier:2, localContext:'A border town 9 miles north of Carlisle known for its livestock market — modest residential area with local professional and family rental demand close to the Scottish border.', propertyTypes:'Victorian terraces, family semis, private lets, border-town properties', nearbyAreas:['Carlisle City Centre','Gretna','Canonbie'], lat:54.9742, lng:-2.9694 },
   { slug:'penrith', name:'Penrith', postcode:'CA11', region:'carlisle', borough:'Eden', tier:1, localContext:'The gateway to the Lake District and Eden Valley — Penrith has a buoyant rental market driven by tourism, the M6 corridor, and its growing professional base close to the Lakes.', propertyTypes:'Stone townhouses, family semis, rural cottages, holiday lets', nearbyAreas:['Carlisle City Centre','Appleby-in-Westmorland','Keswick'], lat:54.6640, lng:-2.7567 },
   { slug:'appleby-in-westmorland', name:'Appleby-in-Westmorland', postcode:'CA16', region:'carlisle', borough:'Eden', tier:3, localContext:'A historic Eden Valley market town famous for the annual Horse Fair — holiday lets and permanent residences in traditional stone properties create specialist cleaning demand throughout the year.', propertyTypes:'Stone cottages, holiday lets, traditional townhouses, rural Eden Valley properties', nearbyAreas:['Penrith','Kirkby Stephen','Carlisle City Centre'], lat:54.5786, lng:-2.4940 },
+
+  // ── BOLTON EXPANSION — 24 additional borough areas ──────
+  ...BOLTON_EXTRA_LOCATIONS,
 ]
 
 // ─────────────────────────────────────────────────────────────────
