@@ -20,7 +20,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const location = getLocation(locationSlug)
   if (!service || !location) return { title: 'Not Found' }
 
-  const title = `${service.name} in ${location.name}`
+  const title = service.metaTitle
+    ? interpolate(service.metaTitle, location)
+    : `${service.name} in ${location.name}`
   const description = interpolate(service.metaDescription, location)
   const canonical = `${CONTACT.siteUrl}/cleaning/${serviceSlug}/${locationSlug}/`
 

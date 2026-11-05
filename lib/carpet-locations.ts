@@ -259,7 +259,7 @@ export const CARPET_LOCATIONS: CarpetLocation[] = [
     localContext:'Oldham has one of Greater Manchester\'s most diverse private rental markets — Victorian mill terraces to modern estates all requiring professional carpet cleaning services.',
     propertyTypes:'Victorian mill terraces, semis, diverse private let portfolio',
     carpetContext:'Oldham\'s varied housing stock presents every type of carpet challenge. Our experienced team has cleaned thousands of homes across OL1 and surrounding postcodes.',
-    stainContext:'Rental property heavy soiling, pet stains, general family wear. Oldham\'s large family household demographic means allergen reduction and deep pile cleaning are popular.',
+    stainContext:'Rental property heavy soiling, pet stains, blood and other protein-based stains, general family wear. Oldham\'s large family household demographic means allergen reduction, stain removal and deep pile cleaning are all popular requests.',
     nearbyAreas:['Failsworth','Chadderton','Royton','Rochdale'],
     lat:53.5409, lng:-2.1114 },
 
@@ -585,6 +585,10 @@ export function buildFAQ(location: CarpetLocation) {
     {
       q: `Do you remove pet stains and odours from carpets in ${location.name}?`,
       a: `Yes. We use specialist enzyme-based treatments to break down pet urine stains and eliminate odours at the source — not just mask them. Pet stain and odour treatment is available as an add-on to any carpet clean in ${location.name}. We also offer pet hair removal as a separate add-on.`
+    },
+    {
+      q: `Can you remove blood stains from carpet in ${location.name}?`,
+      a: `Yes, in most cases — even stains that have already dried in. Blood is a protein-based stain, so it needs cold-water pre-treatment and an enzyme-based solution rather than hot water (heat sets protein stains permanently). Our ${location.name} team carries the right pre-treatment for blood, wine, coffee, and other protein or tannin stains as standard — it's included in every carpet clean, not charged as an extra. The sooner you book after the stain occurs, the higher the chance of full removal, but we can usually still lift old, set-in stains too.`
     },
     {
       q: `Can you clean my carpet and return it to deposit-return standard for end of tenancy in ${location.name}?`,

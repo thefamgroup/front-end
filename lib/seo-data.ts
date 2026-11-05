@@ -10,6 +10,7 @@ export interface ServiceData {
   name: string
   shortName: string
   tagline: string
+  metaTitle?: string        // overrides the default "{name} in {location}" <title>; {location} replaced dynamically
   metaDescription: string
   h1Template: string        // {location} replaced dynamically
   intro: string             // {location}, {postcode} replaced
@@ -100,6 +101,7 @@ export const SERVICES: ServiceData[] = [
     name: 'Regular Home Cleaning',
     shortName: 'Regular Clean',
     tagline: 'Your cleaner, every week. Same person, same standard.',
+    metaTitle: 'Cleaners & Housekeeping in {location} | Regular House Cleaning',
     metaDescription: 'Regular house cleaning in {location} from £35. Weekly, fortnightly, or monthly. Same DBS-checked cleaner every visit. No contracts. Call 07767 759 013.',
     h1Template: 'Regular House Cleaning in {location}',
     intro: 'Life is busy enough. Our regular cleaning service gives {location} homes a consistent, professional clean without the hassle — weekly, fortnightly, or monthly, always from the same trusted cleaner. No contracts, no lock-in, and always the same face at your door. We serve {postcode} and the surrounding area.',
