@@ -21,8 +21,10 @@ export function LocalServicePage({ service, location }: Props) {
   const h1 = interpolate(service.h1Template, location)
   const intro = interpolate(service.intro, location)
 
-  // Nearby areas for internal linking
+  // Nearby areas for internal linking — nearbyAreas stores display names (e.g. 'Ancoats'),
+  // not slugs, so convert before matching (same approach as Carpet/OfficeLocationPage).
   const nearbyPages = location.nearbyAreas
+    .map(name => name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))
     .map(slug => LOCATIONS.find(l => l.slug === slug))
     .filter(Boolean)
     .slice(0, 4)

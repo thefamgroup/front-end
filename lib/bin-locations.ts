@@ -17,6 +17,7 @@
 // 6. Combined with domestic cleaning = cross-sell angle none of competitors mention
 
 import { BOLTON_BIN_LOCATIONS } from './bolton-bin-locations'
+import { POSTCODE_GAP_BIN_LOCATIONS } from './postcode-gap-bin-locations'
 
 export type BinRegion = 'manchester' | 'crewe' | 'stoke' | 'liverpool' | 'carlisle'
 
@@ -1538,6 +1539,9 @@ export const BIN_LOCATIONS: BinLocation[] = [
 
   // ── BOLTON EXPANSION — 24 additional borough bin pages ──
   ...BOLTON_BIN_LOCATIONS,
+
+  // ── POSTCODE GAP AUDIT — 25 bin pages matching the location gaps ──
+  ...POSTCODE_GAP_BIN_LOCATIONS,
 ]
 
 // ─────────────────────────────────────────────────────────────────

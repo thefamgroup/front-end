@@ -3,6 +3,7 @@
 // Greater Manchester (10 boroughs) | Crewe & Cheshire East | Stoke-on-Trent | Liverpool & Merseyside | Carlisle & Cumbria
 
 import { BOLTON_EXTRA_LOCATIONS } from './bolton-locations'
+import { POSTCODE_GAP_LOCATIONS } from './postcode-gap-locations'
 
 export type Region = 'manchester' | 'crewe' | 'stoke' | 'liverpool' | 'carlisle'
 
@@ -249,6 +250,9 @@ export const LOCATIONS_EXPANDED: LocationData[] = [
 
   // ── BOLTON EXPANSION — 24 additional borough areas ──────
   ...BOLTON_EXTRA_LOCATIONS,
+
+  // ── POSTCODE GAP AUDIT — 25 districts with zero prior coverage ──
+  ...POSTCODE_GAP_LOCATIONS,
 ]
 
 // ─────────────────────────────────────────────────────────────────
