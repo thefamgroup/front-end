@@ -25,6 +25,7 @@ function buildAllUrls(): string[] {
     `${BASE}/about/`,
     `${BASE}/careers/`,
     `${BASE}/service-areas/`,
+    `${BASE}/cleaning/bolton/`,
     // Engine 1: main services × locations
     ...SERVICES.map(s => `${BASE}/cleaning/${s.slug}/`),
     ...params.map(({ service, location }) => `${BASE}/cleaning/${service}/${location}/`),

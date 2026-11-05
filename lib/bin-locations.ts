@@ -592,6 +592,14 @@ export const BIN_LOCATIONS: BinLocation[] = [
     propertyTypes:'Interwar housing, terraces, family rentals',
     nearbyAreas:['swinton-bin','salford-bin','irlam-bin'] },
 
+  { slug:'clifton-bin', name:'Clifton', postcode:'M27',
+    region:'manchester', borough:'Salford', tier:3,
+    councilName:'Salford City Council',
+    collectionFrequency:'Weekly general waste, fortnightly recycling managed by Salford City Council',
+    localContext:'Clifton\'s settled family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours.',
+    propertyTypes:'Interwar semis, terraces, family rentals',
+    nearbyAreas:['swinton-bin','pendlebury-bin'] },
+
   { slug:'hale-barns-bin', name:'Hale Barns', postcode:'WA15',
     region:'manchester', borough:'Trafford', tier:2,
     councilName:'Trafford Council',
@@ -703,6 +711,22 @@ export const BIN_LOCATIONS: BinLocation[] = [
     localContext:'Atherton\'s active family households generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours — and Atherton families who subscribe almost never cancel once they experience the difference.',
     propertyTypes:'Terraced houses, semis, family rentals',
     nearbyAreas:['leigh-bin','wigan-bin','worsley-bin'] },
+
+  { slug:'abram-bin', name:'Abram', postcode:'WN2',
+    region:'manchester', borough:'Wigan', tier:3,
+    councilName:'Wigan Council',
+    collectionFrequency:'Weekly general waste, fortnightly recycling managed by Wigan Council',
+    localContext:'Abram\'s mix of terraced streets and modern estates generate food waste, garden waste, and general mess that builds up quickly in wheelie bins between council collections. Regular four-weekly professional cleaning prevents bacteria, maggots, and persistent odours.',
+    propertyTypes:'Terraced houses, modern estates, family homes',
+    nearbyAreas:['wigan-bin','leigh-bin'] },
+
+  { slug:'haigh-bin', name:'Haigh', postcode:'WN1',
+    region:'manchester', borough:'Wigan', tier:3,
+    councilName:'Wigan Council',
+    collectionFrequency:'Weekly general waste, fortnightly recycling managed by Wigan Council',
+    localContext:'Haigh\'s larger detached and semi-detached homes maintain their properties to a high standard — a good fit for regular, affordable bin cleaning alongside a wider home cleaning routine.',
+    propertyTypes:'Detached homes, semis, village properties',
+    nearbyAreas:['wigan-bin'] },
 
   { slug:'farnworth-bin', name:'Farnworth', postcode:'BL4',
     region:'manchester', borough:'Bolton', tier:2,

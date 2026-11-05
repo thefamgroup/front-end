@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: 'thefamgroup — Family. Community. Care.',
     template: '%s | thefamgroup',
   },
-  description: 'Professional residential and commercial cleaning services across Manchester, Liverpool, Cheshire, Stoke-on-Trent, Carlisle and Crewe. DBS-checked cleaners, fully insured, no lock-in contracts. End of tenancy, deep clean, and recurring services from £60.',
+  description: 'thefamgroup — trusted family cleaning services across Manchester, Liverpool, Cheshire, Stoke-on-Trent, Carlisle and Crewe. DBS-checked cleaners, fully insured, no lock-in contracts. End of tenancy, deep clean, and recurring services from £60.',
   keywords: [
     'cleaning services Manchester', 'cleaning services Liverpool',
     'cleaning services Cheshire', 'cleaning services Stoke-on-Trent',
