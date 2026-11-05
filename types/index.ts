@@ -100,6 +100,7 @@ export interface BlogPost {
   date: string
   readTime: string
   emoji: string
+  illustration: string      // name of an exported component in components/icons/ServiceIllustrations
   content: string[]        // paragraphs; a string starting with "## " renders as an H2
   relatedHref?: string     // internal link to a relevant service/location page
   relatedLabel?: string

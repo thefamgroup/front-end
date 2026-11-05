@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
+import type React from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { BLOG_POSTS } from '@/lib/data'
+import * as Illustrations from '@/components/icons/ServiceIllustrations'
 
 export const metadata: Metadata = {
   title: 'Cleaning Tips & Advice Blog',
@@ -21,13 +23,17 @@ export default function BlogPage() {
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {BLOG_POSTS.map(post => (
+          {BLOG_POSTS.map(post => {
+            const Illustration = (Illustrations as unknown as Record<string, React.ComponentType<{ className?: string }>>)[post.illustration]
+            return (
             <Link
               key={post.id}
               href={`/blog/${post.slug}/`}
               className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:-translate-y-0.5 transition-all flex flex-col"
             >
-              <div className="text-4xl mb-4">{post.emoji}</div>
+              <div className="w-14 h-14 mb-4">
+                {Illustration ? <Illustration className="w-full h-full" /> : <span className="text-4xl">{post.emoji}</span>}
+              </div>
               <span className="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-2">{post.category}</span>
               <h2 className="font-display font-bold text-lg text-gray-900 mb-2 leading-snug">{post.title}</h2>
               <p className="text-gray-500 text-sm mb-4 flex-1">{post.excerpt}</p>
@@ -36,7 +42,8 @@ export default function BlogPage() {
                 <ArrowRight size={16} className="text-brand-600" />
               </div>
             </Link>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

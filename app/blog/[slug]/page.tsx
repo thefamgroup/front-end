@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import type React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Phone, ArrowRight } from 'lucide-react'
 import { BLOG_POSTS, CONTACT } from '@/lib/data'
+import * as Illustrations from '@/components/icons/ServiceIllustrations'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -42,6 +44,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound()
 
   const canonical = `https://www.${CONTACT.website}/blog/${post.slug}/`
+  const Illustration = (Illustrations as unknown as Record<string, React.ComponentType<{ className?: string }>>)[post.illustration]
 
   const schema = {
     '@context': 'https://schema.org',
@@ -63,7 +66,9 @@ export default async function BlogPostPage({ params }: PageProps) {
             <ArrowLeft size={14} /> Back to blog
           </Link>
 
-          <div className="text-5xl mb-5">{post.emoji}</div>
+          <div className="w-20 h-20 mb-5">
+            {Illustration ? <Illustration className="w-full h-full" /> : <span className="text-5xl">{post.emoji}</span>}
+          </div>
           <span className="text-xs font-semibold text-brand-600 uppercase tracking-wide">{post.category}</span>
           <h1 className="font-display text-[clamp(28px,3.5vw,44px)] font-extrabold text-gray-900 mt-2 mb-4 leading-tight">
             {post.title}
