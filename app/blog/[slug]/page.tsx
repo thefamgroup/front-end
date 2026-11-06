@@ -6,6 +6,30 @@ import { ArrowLeft, Phone, ArrowRight } from 'lucide-react'
 import { BLOG_POSTS, CONTACT } from '@/lib/data'
 import * as Illustrations from '@/components/icons/ServiceIllustrations'
 
+// Parses simple [label](url) markdown links within a paragraph of plain text,
+// so body copy can carry real contextual internal/external links rather than
+// relying only on the single CTA block at the end of the post.
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (!match) return part
+    const [, label, href] = match
+    if (href.startsWith('http')) {
+      return (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer nofollow" className="text-brand-600 underline hover:text-brand-700">
+          {label}
+        </a>
+      )
+    }
+    return (
+      <Link key={i} href={href} className="text-brand-600 underline hover:text-brand-700">
+        {label}
+      </Link>
+    )
+  })
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>
 }
@@ -20,13 +44,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return { title: 'Not Found' }
 
   const canonical = `https://www.${CONTACT.website}/blog/${post.slug}/`
+  const title = post.metaTitle ?? post.title
 
   return {
-    title: post.title,
+    title,
     description: post.metaDescription,
     alternates: { canonical },
     openGraph: {
-      title: post.title,
+      title,
       description: post.metaDescription,
       url: canonical,
       siteName: 'thefamgroup',
@@ -34,7 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: post.date,
     },
-    twitter: { card: 'summary', title: post.title, description: post.metaDescription },
+    twitter: { card: 'summary', title, description: post.metaDescription },
   }
 }
 
@@ -82,7 +107,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   {block.replace('## ', '')}
                 </h2>
               ) : (
-                <p key={i} className="text-gray-600 leading-relaxed">{block}</p>
+                <p key={i} className="text-gray-600 leading-relaxed">{renderInlineLinks(block)}</p>
               )
             )}
           </div>

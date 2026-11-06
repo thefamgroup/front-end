@@ -134,7 +134,7 @@ describe('Blog detail page (/blog/[slug])', () => {
   it('produces metadata with a canonical URL and non-empty description for every post', async () => {
     for (const p of BLOG_POSTS) {
       const metadata = await generateBlogMetadata({ params: Promise.resolve({ slug: p.slug }) })
-      expect(metadata.title).toBe(p.title)
+      expect(metadata.title).toBe(p.metaTitle ?? p.title)
       expect(metadata.description).toBe(p.metaDescription)
       expect((metadata.alternates as any)?.canonical).toContain(p.slug)
     }

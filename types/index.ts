@@ -94,6 +94,7 @@ export interface BlogPost {
   id: string
   slug: string
   title: string
+  metaTitle?: string       // shorter override for the <title> tag; falls back to title if unset
   excerpt: string
   metaDescription: string
   category: string

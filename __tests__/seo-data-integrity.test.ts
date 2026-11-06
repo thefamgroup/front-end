@@ -220,6 +220,40 @@ describe('data field integrity', () => {
     }
   })
 
+  it('every BLOG_POSTS entry fits SEO title/description length limits', () => {
+    for (const post of BLOG_POSTS) {
+      const titleTagLength = (post.metaTitle ?? post.title).length + ' | thefamgroup'.length
+      expect(titleTagLength).toBeLessThanOrEqual(60)
+      expect(post.metaDescription.length).toBeLessThanOrEqual(155)
+    }
+  })
+
+  it('every BLOG_POSTS entry has at least 2 internal links (relatedHref + inline)', () => {
+    for (const post of BLOG_POSTS) {
+      const text = post.content.join(' ')
+      const inlineInternal = [...text.matchAll(/\[[^\]]+\]\((\/[^)]+)\)/g)].length
+      const total = inlineInternal + (post.relatedHref ? 1 : 0)
+      expect(total).toBeGreaterThanOrEqual(2)
+    }
+  })
+
+  it('every inline link target in BLOG_POSTS content resolves to a real page', () => {
+    const realBlogSlugs = new Set(BLOG_POSTS.map(p => `/blog/${p.slug}/`))
+    const knownStaticPaths = new Set([
+      '/cleaning/carpet-cleaning/', '/cleaning/bolton/', '/cleaning/bin-cleaning/',
+      '/cleaning/deep-cleaning/', '/cleaning/regular-house-cleaning/',
+      '/cleaning/end-of-tenancy-cleaning/', '/cleaning/office-commercial-cleaning/',
+      '/services/', '/prices/',
+    ])
+    for (const post of BLOG_POSTS) {
+      const text = post.content.join(' ')
+      const internalLinks = [...text.matchAll(/\[[^\]]+\]\((\/[^)]+)\)/g)].map(m => m[1])
+      for (const href of internalLinks) {
+        expect(realBlogSlugs.has(href) || knownStaticPaths.has(href)).toBe(true)
+      }
+    }
+  })
+
   it('CONTACT.phone and CONTACT.phoneTel always match the same number', () => {
     const digitsFromPhone = CONTACT.phone.replace(/\D/g, '')
     expect(CONTACT.phoneTel).toContain(digitsFromPhone)
